@@ -1,0 +1,49 @@
+@charset "utf-8";
+/* CSS Document */
+/*导航*/
+body{background:#555;}
+.boder{height:80px;background:#006;margin-top:0px;/*border:1px solid #999;*/opacity:0.9;filter:alpha(opacity:90);}
+.boder h1{line-height:80px;font-family:"黑体";color:#FFF;margin-left:10px;text-shadow:10px 10px 2px #000;}
+.boder_nav{ position:relative;margin-top:10px;font-family:"黑体";text-shadow:5px 5px 2px #000;}
+.boder_nav li{width:150px;height:60px;text-align:center;line-height:60px;position:relative; z-index:5;cursor:pointer; }
+.boder_nav li a{color:#CCC;font-size:16px;}
+.boder_nav li.box{ position:absolute;left:0;top:0; background:red;border-radius:10px;opacity:0.5;filter:alpha(opacity:50); z-index:1;box-shadow:10px 10px 8px #000;} 
+
+/*555*/
+.one_content{height:540px;/*background:red;*/margin-top:30px;}
+
+#btn_prev{margin-left:470px;
+width:100px; height:34px; border:1px solid #000; border-radius:10px; line-height:24px; text-align:center; font-size:20px; background:#ccc;
+	box-shadow:inset 0 0 10px green,0 10px 2px #000;
+	transition:0.5s all ease;
+	position:relative;left:0;top:0;
+}
+
+#btn_next{
+width:100px; height:34px; border:1px solid #000; border-radius:10px; line-height:24px; text-align:center; font-size:20px; background:#ccc;
+	box-shadow:inset 0 0 10px green,0 10px 2px #000;
+	transition:0.5s all ease;
+	position:relative;left:0;top:0;
+}
+#btn_prev:hover{box-shadow:inset 0 0 20px green,0 10px 2px #000;}
+#btn_prev:active{box-shadow:inset 0 0 20px green,0 0px 2px #000;top:10px;}
+
+#btn_next:hover{box-shadow:inset 0 0 20px green,0 15px 2px #000;}
+#btn_next:active{box-shadow:inset 0 0 20px green,0 0px 2px #000;top:15px;}
+
+.one_content #ul1{ position:relative;width:480px; height:300px; background:#ccc; margin:130px auto;}
+.one_content #ul1 li{ position:absolute;left:0;top:0; opacity:0;overflow:hidden;
+	transform: perspective(800px) rotateY(0deg);
+	transition:0.5s all ease;
+}
+
+.one_content #ul1 li.l2{ opacity:0; transform: perspective(800px) translateX(-300px) rotateY(45deg); z-index:1;}
+.one_content #ul1 li.l1{ opacity:1; transform: perspective(800px) translateX(-200px) rotateY(45deg); z-index:3;}
+.one_content #ul1 li.cur{ opacity:1; z-index:5;}
+
+.one_content #ul1 li.r1{ opacity:1; transform: perspective(800px) translateX(200px) rotateY(-45deg); z-index:3;}
+.one_content #ul1 li.r2{ opacity:0; transform: perspective(800px) translateX(300px) rotateY(-45deg); z-index:1;}
+.one_content #ul1 li div{width:480px;height:140px;background:rgba(0,0,255,0.5);position:absolute;left:0;bottom:-140px;line-height:140px;text-align:center;font-size:48px;font-family:"黑体";color:#FFF;
+transition:0.5s all ease;
+}
+.one_content #ul1 li.cur:hover div{bottom:0;}
