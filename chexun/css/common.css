@@ -1,0 +1,17 @@
+@charset "utf-8";
+/* CSS Document */
+*{ margin:0; padding:0; }
+a{ text-decoration:none;}
+li{ list-style:none; }
+textarea{ resize:none;} 
+input,select,textarea{ outline:none; }
+img,input,select,textarea{ vertical-align:top; }
+.clearFix{ zoom:1; }
+
+.fl{ float:left;display:inline;}
+.fr{ float:right;display:inline;}
+.clearFix:after{ content:''; display:block; clear:both;}
+
+.wrapper{width:960px;margin:0 auto;}
+body{font-family:'宋体';font-size:12px;}
+a{color:#000;}

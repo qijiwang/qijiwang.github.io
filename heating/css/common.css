@@ -1,0 +1,62 @@
+@charset "UTF-8";
+/* CSS Document */
+
+body,ul,li,p,div,h1,h2,h3,h4,h5,h6,input,dl,dd,span,input{ margin: 0; padding:0;}
+a{ background:transparent; text-decoration:none; cursor:pointer; color:#121212; outline:none;}
+a:active,
+a:hover{ outline: 0; color:#4a90e2;}
+ul,li,ol,li,dl,dd{ list-style-type:none;}
+button{ cursor:pointer; outline:none;}
+i,em{ font-style:normal;}
+h1,h2,h3,h4,h5,h6{ font-weight:normal;}
+h2{ font-size:16px;}
+img{ border:none;}
+input{ font-family:"Microsoft YaHei","SimSun",Arial; outline:none;}
+
+body{
+  font-family:"Microsoft YaHei","SimSun",Arial;
+  font-size: 12px;
+  color: #333;
+  background-color:#ffffff;
+}
+.com-width100{ width:100%;}
+.border{border:1px solid #d7d7d7;}
+
+/*外边距*/
+.mg-lf15{margin-left:15px;}
+.mg-tp20{margin-top:20px;}
+
+/*内边距*/
+.pg-tp{padding-top:5px;}
+.pg-rg{padding-right:5px;}
+
+/*左右浮动*/
+.com-left{ float:left;}
+.com-right{ float:right;}
+.com-clear{ clear:both;}
+.com-cursor{cursor:pointer;}
+
+/*定位*/
+.com-relative{ position:relative;}
+.com-absolute{ position:absolute;}
+
+/*字体颜色*/
+.font-color1{color:#c4000d;}
+.font-color2{color:#a70c16;}
+
+/*背景颜色*/
+.bak-f1{background-color:#c4000d;}
+
+/*居中*/
+.com-text-left{ text-align:left;}
+.com-text-center{ text-align:center;}
+.com-text-right{ text-align:right;}
+.font-weight{font-weight:bold;}
+
+/*区块*/
+.com-none{ display:none;}
+.com-block{ display:block;}
+.com-inlineblock{ display:inline-block; zoom: 1; *display: inline;}
+.com-hidden{ overflow:hidden;}
+.com-table{ display:table;}	
+.com-table-cell{ display:table-cell;}

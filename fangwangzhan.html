@@ -7,7 +7,6 @@
 <link href="css/fangwangzhan.css" rel="stylesheet"  />
 <script src="js/fangwangzhan.js"></script>
 <style>
-
 </style>
 </head>
 
@@ -15,7 +14,7 @@
   <div id="" class="boder clearFix">
      <div class="wrapper">
           <h1 class="fl">MY PERSONAL WEBSITE</h1>
-          <ul id="ul" class="boder_nav fr">
+          <ul id="daohangul" class="boder_nav fr">
              <li class="fl"><a href="index.html">首页</a></li>
              <li class="fl"><a href="xiaozuopinye.html">精美小作品</a></li>
              <li class="fl"><a href="fangwangzhan.html">仿整站</a></li>
@@ -24,21 +23,70 @@
           </ul>
      </div>
   </div>
+  
+<!---->
+
   <div class="two_content wrapper">
       <ul id="two_content_ul">
          <li><img width="150px" height="240px" src="images/two1.jpg" />
-            <div >小米网</div>
+            <div ><a href="mi/index.html">小米网</a></div>
          </li>
          <li><img width="150px" height="240px" src="images/two2.jpg" /> 
-            <div>美丽说</div>
+            <div><a href="heating/index.html">项目</a></div>
          </li>
          <li><img width="150px" height="240px" src="images/two3.jpg" />
-             <div >优酷网</div>
+             <div ><a href="youku/index.html">优酷网</a></div>
          </li>
          <li><img width="150px" height="240px" src="images/two4.jpg" />
-             <div >车讯网</div>
+             <div ><a href="chexun/index.html">车讯网</a></div>
          </li>
+         <li><img width="150px" height="240px" src="images/two5.jpg" />
+             <div ><a href="jimu.html">俄罗斯方块</a></div>
+         </li>
+         <li><img width="150px" height="240px" src="images/two6.jpg" />
+             <div ><a href="buyu.html">捕鱼</a></div>
+         </li>
+         <li><img width="150px" height="240px" src="images/mn5.jpg" />
+             <div ><a href="pingbao.html">屏保</a></div>
+         </li>
+
       </ul>
   </div>
 </body>
+<script >
+
+	(function (){
+		var oUl = document.getElementById("daohangul");
+		var aLi = oUl.children;
+		var oBox = aLi[aLi.length - 1];
+		
+		for(var i = 0; i < aLi.length - 1; i++){
+			aLi[i].onmouseover = function(){
+				
+				move(oBox,this.offsetLeft);
+			};
+		}
+		var speed = 0;
+		var left=0;
+		function move(obj,iTarget){
+			
+			clearInterval(obj.timer);
+			obj.timer = setInterval(function(){
+				speed += (iTarget - left)/5;//加速度
+				speed *= 0.7;  //摩擦
+				
+				left += speed;
+				obj.style.left = Math.round(left) + "px";
+				if(obj.offsetLeft == iTarget && Math.abs(speed) < 1){
+					clearInterval(obj.timer);
+				}
+				
+				
+			},30);
+		}
+		
+	})();
+
+</script>
+
 </html>

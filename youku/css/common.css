@@ -1,0 +1,18 @@
+@charset "utf-8";
+/* CSS Document */
+*{ margin:0; padding:0; }
+a{ text-decoration:none;}
+li{ list-style:none; }
+textarea{ resize:none;} 
+input,select,textarea{ outline:none; }
+img,input,select,textarea{ vertical-align:top; }
+
+.fl{ float:left;display:inline;}
+.fr{ float:right;display:inline;}
+.clearFix:after{ content:''; display:block; clear:both;}
+.clearFix{ zoom:1; }
+
+body{font-size:12px;font-family:'黑体';}
+.wrapper{width:970px;margin:0 auto;}
+a{color:#333;}
+img{border:none;}

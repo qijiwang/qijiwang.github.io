@@ -1,0 +1,498 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>捕鱼</title>
+<style>
+* {margin:0; padding:0; list-style:none;}
+body {background:black; text-align:center;}
+#c1 {background:url(images/game_bg_2_hd.jpg) no-repeat;/*background-size:1200px;*/}
+</style>
+</style>
+<script>
+/*********************************/
+function d2a(n)
+{
+	return n*Math.PI/180;
+}
+
+function a2d(n)
+{
+	return n*180/Math.PI;
+}
+
+function rnd(n, m)
+{
+	return Math.floor(Math.random()*(m-n))+n;
+}
+/*********************************/
+
+//公共的
+function Sprite(img)
+{
+	this.img=img;
+	
+	this.x=0;
+	this.y=0;
+	
+	this.rotate=0;
+	
+	this.sx=0;
+	this.sy=0;
+	
+	this.w=0;
+	this.h=0;
+}
+
+Sprite.prototype.draw=function (gd)
+{
+	gd.save();		//保存：状态(颜色、角度、xxx)
+	
+	gd.translate(this.x+this.w/2, this.y+this.h/2);
+	gd.rotate(d2a(this.rotate));
+	if(Math.abs(this.rotate)>90)
+	{
+		gd.scale(1, -1);
+	}
+  
+	
+	gd.drawImage(
+		this.img,
+//		sx, sy, sw, sh
+		this.sx, this.sy, this.w, this.h,
+//		dx, dy, dw, dh
+		-this.w/2, -this.h/2, this.w, this.h
+	);
+	
+	gd.restore();
+};
+
+//-------------
+
+function Fish(img, type)
+{
+	var _fish_size=[
+		null,
+		{w:55,h:37},
+		{w:78,h:62},
+		{w:72,h:54},
+		{w:77,h:58},
+		{w:107,h:122},
+	];
+	
+	//1.继承父级的属性
+	Sprite.call(this, img);
+	
+	//子级的事儿
+	this.w=_fish_size[type].w;
+	this.h=_fish_size[type].h;
+	
+	//速度
+	this.speed=3;
+	
+	this.frame=0;
+	this.max_frame=4;
+}
+
+//2.继承父级的方法
+Fish.prototype=new Sprite();
+
+Fish.prototype.move=function ()
+{
+	//1.摆动——慢点
+	this.frame+=0.25;
+	if(this.frame>=this.max_frame)
+	{
+		this.frame=0;
+	}
+	
+	this.sy=parseInt(this.frame)*this.h;
+	
+	//2.走起来——快点
+	var speedX=Math.sin(d2a(this.rotate+90))*this.speed;
+	var speedY=Math.cos(d2a(this.rotate+90))*this.speed;
+	
+	this.x+=speedX;
+	this.y-=speedY;
+};
+
+//-------------
+
+function Cannon(img, type)
+{
+	this.type=type;
+	
+	this._size=[
+		null,
+		{w: 74, h: 74},
+		{w: 74, h: 76},
+		{w: 74, h: 76},
+		{w: 74, h: 83},
+		{w: 74, h: 85},
+		{w: 74, h: 90},
+		{w: 74, h: 94}
+	];
+	
+	Sprite.call(this, img);
+	
+	this.w=this._size[type].w;
+	this.h=this._size[type].h;
+}
+
+Cannon.prototype=new Sprite();
+
+//-------------
+
+function Bullet(img, type)
+{
+	var _size=[
+		null,
+		{x:86, y:0, w:24, h:26},
+		{x:61, y:0, w:25, h:29},
+		{x:32, y:35, w:27, h:31},
+		{x:30, y:82, w:29, h:33},
+		{x:0, y:82, w:30, h:34},
+		{x:30, y:0, w:31, h:35},
+		{x:0, y:0, w:30, h:44}
+	];
+	
+	Sprite.call(this, img);
+	
+	this.sx=_size[type].x;
+	this.sy=_size[type].y;
+	this.w=_size[type].w;
+	this.h=_size[type].h;
+	
+	//速度
+	this.speed=5;	//>鱼的速度
+}
+
+Bullet.prototype=new Sprite();
+
+Bullet.prototype.move=function ()
+{
+	var speedX=Math.sin(d2a(this.rotate))*this.speed;
+	var speedY=Math.cos(d2a(this.rotate))*this.speed;
+	
+	this.x+=speedX;
+	this.y-=speedY;
+};
+
+//-------------
+
+function Coin(img, type)
+{
+	Sprite.call(this, img);
+	
+	this.w=60;
+	this.h=60;
+	
+	//
+	this.frame=0;
+	this.max_frame=10;
+}
+
+Coin.prototype=new Sprite();
+
+Coin.prototype.move=function ()
+{
+	//转起来
+	this.frame++;
+	if(this.frame>=this.max_frame)
+	{
+		this.frame=0;
+	}
+	
+	this.sy=this.h*this.frame;
+	
+	//走起来
+	var targetX=93;
+	var targetY=575;
+	
+	var speedX=(targetX-this.x)/20;
+	var speedY=(targetY-this.y)/20;
+	
+	this.x+=speedX;
+	this.y+=speedY;
+};
+
+/**************************************/
+function loadImages(json, fn)
+{
+	var count=0;	//加载完了几个
+	var total=0;	//总共几个
+	
+	var res={};
+	
+	for(var name in json)
+	{
+		total++;
+		
+		var oImg=new Image();
+		
+		(function (name){
+			oImg.onload=function ()
+			{
+				res[name]=this;
+				
+				count++;
+				
+				if(count==total)	//完事儿
+				{
+					fn(res);
+				}
+			};
+		})(name);
+		
+		oImg.src=json[name];
+	}
+}
+
+function collTest(obj1, obj2)
+{
+	var l1=obj1.x;
+	var t1=obj1.y;
+	var r1=obj1.x+obj1.w;
+	var b1=obj1.y+obj1.h;
+	
+	var l2=obj2.x;
+	var t2=obj2.y;
+	var r2=obj2.x+obj2.w;
+	var b2=obj2.y+obj2.h;
+	
+	//碰不上
+	if(r1<l2 || l1>r2 || b1<t2 || t1>b2)
+	{
+		return false;
+	}
+	else
+	{
+		return true;
+	}
+}
+
+window.onload=function ()
+{
+	var oC=document.getElementById('c1');
+	var gd=oC.getContext('2d');
+	
+	loadImages({
+		fish1:		'images/fish1.png',
+		fish2:		'images/fish2.png',
+		fish3:		'images/fish3.png',
+		fish4:		'images/fish4.png',
+		fish5:		'images/fish5.png',
+		cannon1:	'images/cannon1.png',
+		cannon2:	'images/cannon2.png',
+		cannon3:	'images/cannon3.png',
+		cannon4:	'images/cannon4.png',
+		cannon5:	'images/cannon5.png',
+		cannon6:	'images/cannon6.png',
+		cannon7:	'images/cannon7.png',
+		bottom:		'images/bottom.png',
+		bullet:		'images/bullet.png',
+		coin1:		'images/coinAni1.png'
+	}, function (json){
+		//定时器——运动
+		setInterval(function (){
+			//炮弹
+			for(var i=0;i<arrBullet.length;i++)
+			{
+				arrBullet[i].move();
+			}
+			
+			//飞出去了——删掉
+			for(var i=0;i<arrBullet.length;i++)
+			{
+				if(arrBullet[i].x<-50 || arrBullet[i].y<-50 || arrBullet[i].x>oC.width+50 || arrBullet[i].y>oC.height+50)
+				{
+					arrBullet.splice(i--, 1);
+				}
+			}
+			
+			
+			
+			
+			//鱼
+			for(var i=0;i<arrFish.length;i++)
+			{
+				arrFish[i].move();
+			}
+			
+			//游出去——干掉
+			for(var i=0;i<arrFish.length;i++)
+			{
+				if(arrFish[i].x<-50 || arrFish[i].x>oC.width+50 || arrFish[i].y<-50 || arrFish[i].y>oC.height+50)
+				{
+					arrFish.splice(i--, 1);
+				}
+			}
+			
+			
+			
+			
+			//检测——鱼、炮弹
+			for(var i=0;i<arrFish.length;i++)
+			{
+				for(var j=0;j<arrBullet.length;j++)
+				{
+					//console.log(i, arrFish.length);
+					//console.log(j, arrBullet.length);
+					if(collTest(arrFish[i], arrBullet[j]))
+					{
+						//碰上了：
+						//2.出来个钱
+						var c=new Coin(json.coin1, 1);
+						
+						arrCoin.push(c);
+						
+						c.x=arrFish[i].x+(arrFish[i].w-c.w)/2;
+						c.y=arrFish[i].y+(arrFish[i].h-c.h)/2;
+						
+						//1.鱼、炮弹消失
+						arrFish.splice(i--, 1);
+						arrBullet.splice(j--, 1);
+						
+						
+						
+						break;
+					}
+				}
+			}
+			
+			
+			
+			//钱走起来
+			for(var i=0;i<arrCoin.length;i++)
+			{
+				arrCoin[i].move();
+			}
+			
+			//钱到位置，消失
+			for(var i=0;i<arrCoin.length;i++)
+			{
+				if(Math.abs(arrCoin[i].x-93)<1 && Math.abs(arrCoin[i].y-575))
+				{
+					arrCoin.splice(i--, 1);
+				}
+			}
+		}, 30);
+		
+		
+		//定时器——画
+		setInterval(function (){
+			gd.clearRect(0, 0, oC.width, oC.height);
+			
+			//钱
+			for(var i=0;i<arrCoin.length;i++)
+			{
+				arrCoin[i].draw(gd);
+			}
+			
+			
+			bottom.draw(gd);
+			
+			
+			
+			for(var i=0;i<arrBullet.length;i++)
+			{
+				arrBullet[i].draw(gd);
+			}
+			
+			cannon.draw(gd);
+			
+			for(var i=0;i<arrFish.length;i++)
+			{
+				arrFish[i].draw(gd);
+			}
+			
+			
+			
+		}, 30);
+		
+		
+		//炮
+		var cannon=new Cannon(json.cannon1, 5);
+		
+		cannon.x=400;
+		cannon.y=536;
+		
+		//1.炮不会转
+		document.onmousemove=function (ev)
+		{
+			var x=cannon.x+cannon.w/2;
+			var y=cannon.y+cannon.h/2;
+			
+			var a=ev.pageX-oC.offsetLeft-x;
+			var b=ev.pageY-oC.offsetTop-y;
+			
+			var ang=a2d(Math.atan2(b, a));
+			
+			cannon.rotate=ang+90;
+		};
+		
+		//台子
+		var bottom=new Sprite(json.bottom);
+		
+		bottom.w=765;
+		bottom.h=71;
+		bottom.x=15;
+		bottom.y=533;
+		
+		//2.不会开炮
+		var arrBullet=[];
+		document.onclick=function ()
+		{
+			for(var i=-10;i<10;i++){
+				var b=new Bullet(json.bullet, cannon.type);
+				
+				b.x=cannon.x+(cannon.w-b.w)/2;
+				b.y=cannon.y+(cannon.h-b.h)/2;
+				
+				b.rotate=cannon.rotate+5*i;
+				
+				arrBullet.push(b);
+			};
+		};
+		
+		//3.缺东西——炮台(图片)、按钮
+		
+		//4.鱼出来
+		var arrFish=[];
+		
+		//造鱼
+		setInterval(function (){
+			if(Math.random()<0.1)
+			{
+				var n=rnd(1, 6);
+				var f=new Fish(json['fish'+n], n);
+				
+				arrFish.push(f);
+				
+				if(Math.random()<0.5)	//左边
+				{
+					f.x=-50;
+					f.y=Math.random()*oC.height;
+				}
+				else					//右边
+				{
+					f.x=oC.width+50;
+					f.y=Math.random()*oC.height;
+					
+					f.rotate=-180;	//?
+				}
+			}
+		}, 1);
+		
+		//5.鱼能打
+		//6.打死——变成钱
+		var arrCoin=[];
+	});
+};
+</script>
+</head>
+
+<body>
+<canvas id="c1" width="800" height="600"></canvas>
+</body>
+</html>

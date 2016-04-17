@@ -7,65 +7,324 @@
 <link href="css/xiaozuopinye.css" rel="stylesheet"  />
 <script src="js/move9.js"></script>
 <script src="js/xiaozuopinye.js"></script>
-
 </head>
 
 <body>
   <div id="" class="boder clearFix">
      <div class="wrapper">
           <h1 class="fl">MY PERSONAL WEBSITE</h1>
-          <ul id="ul" class="boder_nav fr">
-             <li class="fl"><a href="index.html">首页</a></li>
-             <li class="fl"><a href="xiaozuopinye.html">精美小作品</a></li>
-             <li class="fl"><a href="fangwangzhan.html">模仿网页</a></li>
-             <li class="fl"><a href="me.html">关于我</a></li>
+          <ul id="daohangul" class="boder_nav fr">
+             <li class="fl"><a  href="index.html">首页</a></li>
+             <li class="fl"><a  href="xiaozuopinye.html">精美小作品</a></li>
+             <li class="fl"><a  href="fangwangzhan.html">仿整站</a></li>
+             <li class="fl"><a  href="me.html">关于我</a></li>
              <li class="box fl"><a href="#"></a></li>
           </ul>
      </div>
   </div>
+  <!---->
   <div id="div1" class="one_content wrapper">
         <input id="btn_prev" type="button" value="上一张"/>
         <input id="btn_next" type="button" value="下一张"/>
-        <ul id="ul1">
-            <li class="l2"><img width="480" height="300"src="images/qc1.jpg" />
-               <div>作品</div>
-            </li>
-            <li class="l1"><img width="480" height="300" src="images/qc2.jpg" />
-               <div>作品</div>
-            </li>
-            <li class="cur"><img width="480" height="300" src="images/qc3.jpg" />
-               <div>作品</div>
-            </li>
-            <li class="r1"><img width="480" height="300" src="images/qc4.jpg" />
-                <div>作品</div>
-            </li>
-            <li class="r2"><img width="480" height="300" src="images/qc5.jpg" />
-            
-               <div>作品</div>
-            </li>
-            <li><img width="480" height="300" src="images/qc6.jpg" />
-                <div>作品</div>
-            </li>
-            <li><img width="480" height="300" src="images/qc7.jpg" />
-                <div>作品</div>
-            </li>
-            <li><img width="480" height="300" src="images/qc8.jpg" />
-                <div>作品</div>
-            </li>
-            <li><img width="480" height="300" src="images/qc9.jpg" />
-                <div>作品</div>
-            </li>
-            <li><img width="480" height="300" src="images/qc10.jpg" />
-                <div>作品</div>
-            </li>
-            <li><img width="480" height="300" src="images/qc11.jpg" />
-                <div>作品</div>
-            </li>
-            <li><img width="480" height="300" src="images/qc12.jpg" />
-                <div>作品</div>
-            </li>
         
+        <ul id="ul1">
+            <li class="l2 l2b"><img width="360" height="200" src="images/qc3.jpg" />
+               <div id="zp1"><a href="javascript:;">1 CSS3时钟</a></div>
+            </li>
+            <li class="l2 l2a"><img width="360" height="200" src="images/qc4.jpg" />
+                <div id="zp2"><a href="javascript:;">2 3D图片展示</a></div>
+            </li>
+            <li class="l1 l1b"><img width="360" height="200" src="images/qc5.jpg" />
+               <div><a id="zp3" href="javascript:;">3 运动选项卡</a></div>
+            </li>
+            <li class="l1 l1a"><img width="360" height="200" src="images/qc12.jpg" />
+               <div ><a id="zp4" href="javascript:;">4 随机彩票</a></div>
+            </li>
+            <li class="cur curb"><img width="360" height="200" src="images/qc6.jpg" />
+               <div id="zp5"><a href="javascript:;">5 圆形运动 </a></div>
+            </li>
+            <li class="cur cura"><img width="360" height="200" src="images/qc7.jpg" />
+                <div id="zp6"><a href="javascript:;">6 照片墙</a></div>
+            </li>
+            <li class="r1 r1b"><img width="360" height="200" src="images/qc8.jpg" />
+                <div id="zp7"><a href="javascript:;">7 放大镜</a></div>
+            </li>
+            <li class="r1 r1a"><img width="360" height="200" src="images/qc9.jpg" />
+                <div id="zp8"><a href="javascript:;">8 跳跳球</a></div>
+            </li>
+            <li class="r2 r2b"><img width="360" height="200" src="images/qc10.jpg" />
+                <div id="zp9"><a href="javascript:;">9 弧版时钟</a></div>
+            </li>
+            <li class="r2 r2a"><img width="360" height="200" src="images/qc11.jpg" />
+                <div id="zp10"><a href="javascript:;">10 json去重排序</a></div>
+            </li>
+            <li ><img width="360" height="200"src="images/qc1.jpg" />
+                <div id="zp11"><a href="javascript:;">11 幻灯片</a></div>
+            </li>
+            <li ><img width="360" height="200" src="images/qc2.jpg" />
+                <div id="zp12"><a href="javascript:;">12 正则</a></div>
+            </li>
         </ul>
+        <div id="fudongbd"></div>
+        <!---->
+        <div id="wang1">
+           <strong id="cha1">×</strong>
+           
+           <div id="wang1_clock">
+               <div class="hour"></div>
+               <div class="min"></div>
+               <div class="sec"></div>
+               <div class="cap"></div>
+                <!--<span><strong>12</strong></span>-->
+           </div>
+        </div>
+        <!---->
+        <div id="wang2">
+           <strong id="cha2">×</strong>
+            <input id="wang2_btn" type="button" value="下一张">
+            <ul id="wang2_ull">
+               <li class="l2"><img width="400" height="260" src="images/hua1.jpg" /></li>
+               <li class="l1"><img width="400" height="260" src="images/hua2.jpg" /></li>
+               <li class="cur"><img width="400" height="260" src="images/hua3.jpg" /></li>
+               <li class="r1"><img width="400" height="260" src="images/hua4.jpg" /></li>
+               <li class="r2"><img width="400" height="260" src="images/hua5.jpg" /></li>
+               <li class=""><img width="400" height="260" src="images/hua6.jpg" /></li>
+               <li class=""><img width="400" height="260" src="images/hua7.jpg" /></li>
+               <li class=""><img width="400" height="260" src="images/hua8.jpg" /></li>
+               <li class=""><img width="400" height="260" src="images/hua9.jpg" /></li>
+               <li class=""><img width="400" height="260" src="images/hua10.jpg" /></li>
+               <li class=""><img width="400" height="260" src="images/hua11.jpg" /></li>
+               <li class=""><img width="400" height="260" src="images/hua12.jpg" /></li>
+            
+            </ul>
+        </div>
+        <!---->
+        <div id="wang3">
+           <strong id="cha3">×</strong>
+            <div id="wang3_box" class=" clearFix box">
+               <div class=" son">
+                  <ul>
+                     <li><img width="600" height="220" src="images/ydxxk1.jpg" alt="" /></li>
+                     <li><img width="600" height="220" src="images/ydxxk2.jpg" alt="" /></li>
+                     <li><img width="600" height="220" src="images/ydxxk3.jpg" alt="" /></li>
+                  </ul>
+               </div>
+              <ol class="fr">
+                 <li><img width="150" height="50" src="images/ydxxk1a.jpg" alt="" /></li>
+                 <li><img width="150" height="50" src="images/ydxxk2a.jpg" alt="" /></li>
+                 <li><img width="150" height="50" src="images/ydxxk3a.jpg" alt="" /></li>
+              </ol>
+              <div id="wang3_bar"><span>◀</span></div>
+            </div>
+        </div>
+        <!---->
+        <div id="wang4">
+            <strong id="cha4">×</strong>
+            <div id="wang4_box" class="clearFix">
+                <span class="red fl">1</span>
+                <span class="red fl">1</span>
+                <span class="red fl">1</span>
+                <span class="red fl">1</span>
+                <span class="red fl">1</span>
+                <span class="red fl">1</span>
+                <span class="blue fl">1</span>
+                <input id="btn" type="button" value="机选" />
+            </div>   
+       </div>
+        <div id="wang5">
+            <strong id="cha5">×</strong>
+                <div id="wang5_div1" >
+                     
+                    <div id="wang5_div2" >
+                        <p>点一点</p>
+                    </div>
+                  
+                </div>
+       </div>
+        <div id="wang6">
+            <strong id="cha6">×</strong>
+            <ul id="wang6_ull" class="clearFix">
+              <li class="fl"><img width="128" height="128" src="images/qc1.jpg" /></li>
+              <li class="fl"><img width="128" height="128" src="images/qc2.jpg" /></li>
+              <li class="fl"><img width="128" height="128" src="images/qc3.jpg" /></li>
+              <li class="fl"><img width="128" height="128" src="images/qc4.jpg" /></li>
+              <li class="fl"><img width="128" height="128" src="images/qc5.jpg" /></li>
+              <li class="fl"><img width="128" height="128" src="images/qc6.jpg" /></li>
+              <li class="fl"><img width="128" height="128" src="images/qc7.jpg" /></li>
+              <li class="fl"><img width="128" height="128" src="images/qc8.jpg" /></li>
+              <li class="fl"><img width="128" height="128" src="images/qc9.jpg" /></li>
+            </ul>
+       </div>
+        <div id="wang7">
+            <strong id="cha7">×</strong>
+            <div id="wang7-div1"><img width="400" height="500" src="images/mn3.jpg"/><div id="mark"></div></div>
+            <div id="wang7-div2"><img id="bigImg" width="800" height="1000" src="images/mn3.jpg"/></div>
+       </div>
+        <div id="wang8">
+            <strong id="cha8">×</strong>
+            <div id="cha8_div1"></div>
+            <div id="cha8_div2"></div>
+            <div id="cha8_div3"></div>
+            <div id="cha8_div4"></div>
+            <div id="cha8_div5"></div>
+            <div id="cha8_div6"></div>
+            <div id="cha8_div7"></div>
+
+       </div>
+        <div id="wang9">
+            <strong id="cha9">×</strong>
+            <canvas id="c1" width="800" height="500"></canvas>
+       </div>
+       <div id="wang10">
+            <strong id="cha10">×</strong>
+            输入原始文本(json格式)：<br>
+            <textarea style="width:500px; height:200px;" id="wang10_txt1">
+            [
+                {name: '张三', pin: 'zhang san'},
+                {name: '王斌', pin: 'wang bin'},
+                {name: '张春桥', pin: 'zhang chun qiao'},
+                {name: '帕多瓦', pin: 'pa duo wa'},
+                {name: '王彬', pin: 'wang bin'},
+                {name: '张超群', pin: 'zhang chao qun'},
+                {name: '王保平', pin: 'wang bao ping'},
+                {name: '钟伟强', pin: 'zhong wei qiang'}
+            ]
+            </textarea><br>
+            <br>
+            <input type="button" value="创建" id="wang10_btn1" />
+            <br>
+            这里输出结果：<br>
+            <ul id="wang10_ul1">
+                <!--<li>姓名：<span></span>全拼：<span></span>简拼：<span></span></li>-->
+            </ul>
+       </div>
+        <div id="wang11">
+            <strong id="cha11">×</strong>
+            <div id="wang11_div1">
+                <ul>
+                    <li style="background:#CC6;"></li>
+                    <li style="background:#fc0;"></li>
+                    <li style="background:#ccF;"></li>
+                    <li style="background:#f9f;"></li>
+                </ul>
+                <ol>
+                    <li><span></span></li>
+                    <li><span></span></li>
+                    <li><span></span></li>
+                    <li><span></span></li>
+                </ol>
+            </div>
+       </div>
+       <div id="wang12">
+            <strong id="cha12">×</strong>
+            <ul>
+                <li class="clearFix">
+                    <span class="fl">校验信息</span>
+                </li>
+                <li class="clearFix">
+                    <span class="fl">邮箱</span>
+                    <div class="w232 fl">
+                        <input type="text" value="" id="mailbox" />
+                    </div>
+                    <div class="fl">
+                    </div>
+                </li>
+                <li class="clearFix">
+                    <span class="fl">网址</span>
+                    <div class="w232 fl">
+                        <input type="text" value="" id="website" />
+                    </div>
+                    <div class="fl">
+                    </div>
+                </li>
+                <li class="clearFix">
+                    <span class="fl">姓名</span>
+                    <div class="w232 fl">
+                        <input type="text" value="" id="name" />
+                    </div>
+                    <div class="fl">
+                    </div>
+                </li>
+                <li class="clearFix">
+                    <span class="fl">年龄</span>
+                    <div class="w232 fl">
+                        <input type="text" value="" id="age" />
+                    </div>
+                    <div class="fl">
+                    </div>
+                </li>
+                <li class="clearFix">
+                    <span class="fl">手机号码</span>
+                    <div class="w232 fl">
+                        <input type="text" value="" id="phonenumber" />
+                    </div>
+                    <div class="fl">
+                    </div>
+                </li>
+                <li class="clearFix">
+                    <span class="fl">QQ</span>
+                    <div class="w232 fl">
+                        <input type="text" value="" id="qq" />
+                    </div>
+                    <div class="fl">
+                    </div>
+                </li>
+                <li class="clearFix">
+                    <span class="fl">身份证</span>
+                    <div class="w232 fl">
+                        <input type="text" value="" id="id" />
+                    </div>
+                    <div class="fl">
+                    </div>
+                </li>
+                <li class="clearFix">
+                    <span class="fl">出身省份</span>
+                    <div class="w232 fl">
+                        <input type="text" value="" id="borthplace" />
+                    </div>
+                    <div class="fl">
+                    </div>
+                </li>
+            </ul>
+       </div>
+       
     </div>
 </body>
+<script >
+
+	(function (){
+		var oUl = document.getElementById("daohangul");
+		var aLi = oUl.children;
+		var oBox = aLi[aLi.length - 1];
+		
+		for(var i = 0; i < aLi.length - 1; i++){
+			aLi[i].onmouseover = function(){
+				
+				move(oBox,this.offsetLeft);
+			};
+		}
+		var speed = 0;
+		var left=0;
+		function move(obj,iTarget){
+			
+			clearInterval(obj.timer);
+			obj.timer = setInterval(function(){
+				speed += (iTarget - left)/5;//加速度
+				speed *= 0.7;  //摩擦
+				
+				left += speed;
+				obj.style.left = Math.round(left) + "px";
+				if(obj.offsetLeft == iTarget && Math.abs(speed) < 1){
+					clearInterval(obj.timer);
+				}
+				
+				
+			},30);
+		}
+		
+	})();
+
+</script>
+
+
 </html>
