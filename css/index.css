@@ -1,11 +1,10 @@
-@charset "utf-8";
-/* CSS Document */
 
-body.bd2{
-}
-body.bd2{background:#555;}
+
+
+
+body.bd2{background:#555;width:100%;}
 /*导航*/
-.boder{height:80px;background:#006;margin-top:0px;/*border:1px solid #999;*/opacity:0.9;filter:alpha(opacity:90);}
+.boder{min-width:100%;height:80px;background:#006;overflow:hidden;}
 .boder h1{line-height:80px;font-family:"黑体";color:#FFF;margin-left:10px;text-shadow:10px 10px 2px #000;}
 .boder_nav{ position:relative;margin-top:10px;margin-right:60px;font-family:"黑体";text-shadow:5px 5px 2px #000;}
 .boder_nav li{width:150px;height:60px;text-align:center;line-height:60px;position:relative; z-index:5;cursor:pointer; }
@@ -13,7 +12,7 @@ body.bd2{background:#555;}
 .boder_nav li.box{ position:absolute;left:0;top:0; background:red;border-radius:10px;opacity:0.5;filter:alpha(opacity:50); z-index:1;box-shadow:10px 10px 8px #000;}
  
 /**/
-.banner{height:560px;overflow:hidden;position:relative;}
+.banner{height:560px;overflow:hidden;position:relative;overflow:hidden;}
 /*1*/
 #banner_div1{ position:relative;width:900px; height:500px; background:url(../images/indexbackground0.jpg) no-repeat; margin:30px auto;background-size:900px 500px;display:none;}
 #banner_div1 .page2{ position:absolute;right:0;top:0;width:450px; height:100%; background:url(../images/indexbackground1.jpg) no-repeat right center; z-index:1;background-size:900px 500px;}
@@ -147,7 +146,7 @@ box-shadow:0 0 10px  #fff;border-radius:12px; }
 
 }
 /*瑜伽*/
-.move{height:510px;/*background:#CCC;*/margin-top:20px;}
+.move{height:510px;/*background:#CCC;*/margin-top:20px;overflow:hidden;}
 #automatic { width: 970px; height: 510px; position: relative; margin: 0 auto;  }
 .prev_div { width: 130px; height: 72px; position: absolute; top: 228px; left: 92px; z-index: 5; background: red; filter: alpha(opacity=0); opacity: 0; cursor: pointer; }
 .next_div { width: 130px; height: 72px; position: absolute; top: 228px; right: 92px; z-index: 5; background: red; filter: alpha(opacity=0); opacity: 0; cursor: pointer; }
@@ -174,7 +173,7 @@ box-shadow:0 0 10px  #fff;border-radius:12px; }
 #automatic .pos_5 { top: 160px; right: -50px; z-index: 2; filter: alpha(opacity=60); opacity: 0.6; }
 #automatic .pos_6 { top: -120px; right: 0; z-index: 1; filter: alpha(opacity=0); opacity: 0; }
 /*尾部*/
-.footer{position:relative;background:#333;height:160px;margin-top:40px;}
+.footer{position:relative;background:#333;height:160px;margin-top:40px;overflow:hidden;}
 .footer1{position:absolute;left:25%;top:30px;background:; font-size:250%; color:#ccc;width:600px;height:70px;text-align:center;padding-top:30px;opacity:0.5;filter:alpha(opacity:50);
 
       transition:3s all ease;
