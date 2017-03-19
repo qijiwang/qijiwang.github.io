@@ -5,223 +5,245 @@
 <title>宗秀</title>
 <link href="css/common.css" rel="stylesheet"  />
 <link href="css/index.css" rel="stylesheet"  />
-<script src="js/index.js"></script>
-<style>
+<script src="js/jquery-1.11.2.min.js"></script>
 
+<script src="js/index.js"></script>
+
+<style>
+#menu{
+  position: fixed;
+  left:0;
+  top:200px;
+  z-index: 10000;
+}
+#menu ul{
+  background:#ddd; 
+}
+#menu li{
+ width: 100px;
+ height: 30px;line-height: 30px;text-align: center;
+ border-bottom: 1px solid blue;
+}
+.cur{background-color: #32c92a;color: #fff;}
 </style>
 <script src="js/move9.js"></script>
 </head> 
 <body class="bd2" >  
-  <div id="" class="boder">
+  <div id="menu">
+    <ul>
+      <li><a href="#item1" class="cur">One</a></li>
+      <li><a href="#item2">Two</a></li>
+      <li><a href="#item3">Three</a></li>
+      <li><a href="#item4">Four</a></li>
+ 
+    </ul>
+  </div>
+<!--  -->
+  <div class="boder ">
      <div class="wrapper clearFix">
-          <h1 class="fl">MY PERSONAL WEBSITE</h1>
-          <ul id="daohangul" class="boder_nav fr">
-             <li class="fl"><a href="index.html">首页</a></li>
-             <li class="fl"><a href="xiaozuopinye.html">精美小作品</a></li>
-             <li class="fl"><a href="fangwangzhan.html">仿整站</a></li>
-             <li class="fl"><a href="me.html">关于我</a></li>
-             <li class="box fl"><a href="#"></a></li>
-          </ul>
+          <h1 class="fl">MY WEBSITE</h1>
+          <div class="fr nav_right">
+            <div class="nav_right_son1"></div>
+            <ul id="daohangul" class="boder_nav fr">
+               <li class="fl"><a href="index.html">首页</a></li>
+               <li class="fl"><a href="demo.html">demo</a></li>
+               <li class="fl"><a href="fangwangzhan.html">仿整站</a></li>
+               <li style="border:none;" class="fl"><a href="me.html">关于我</a></li>
+               <li class="box fl"><a href="#"></a></li>
+            </ul>            
+          </div>
+
      </div>
   </div>
   <!---->
-  <div  class="banner">
-      <div id="banner_div1" class="banner_box"></div>
-           
-      <div id="banner_div2" class="banner_box"></div>
-      
-      <div id="banner_div3" class="banner_box"></div>
-      
-      <div id="banner_div4" class="banner_box"></div>
+  <div id="item1"  class="banner item wrapper">
+      <div >
+            <div id="blast_box">
+                <!-- <span></span> -->
+            </div>
 
-        <div class="banner_son" id="banner_fanye">翻页
-           <div class="front"></div>
-           <div class="back"></div>
-           <div class="left"></div>
-           <div class="right"></div>
-           <div class="top"></div>
-           <div class="bottom"></div>
-       </div>
-       
-        <div class="banner_son" id="banner_baozha">爆炸
-           <div class="front"></div>
-           <div class="back"></div>
-           <div class="left"></div>
-           <div class="right"></div>
-           <div class="top"></div>
-           <div class="bottom"></div>
-       </div>
-        <div class="banner_son" id="banner_fanzhuan">翻转
-           <div class="front"></div>
-           <div class="back"></div>
-           <div class="left"></div>
-           <div class="right"></div>
-           <div class="top"></div>
-           <div class="bottom"></div>
-       </div>
-        <div class="banner_son" id="banner_niuqu">扭曲
-           <div class="front"></div>
-           <div class="back"></div>
-           <div class="left"></div>
-           <div class="right"></div>
-           <div class="top"></div>
-           <div class="bottom"></div>
-       </div>
+            <span id="banner_prev"></span>
+            <span id="banner_next"></span>
+            <ul class="clearFix">
+                <li style="background: red" class="fl"></li>
+                <li class="fl"></li>
+                <li class="fl"></li>
+            </ul>
+      </div>
+  </div>     
+  <!---->
+  <div id="item2" class="content_skill_bd item wrapper">
+      <div>
+        <ul class="clearFix">
+            <li class="oll fl">
+                <img height="80%" src="images/w1.png" alt="" />
+                <span></span>
+            </li>
+            <li class="oll fl">
+                <img height="80%" src="images/w2.png" alt="" />
+                <span></span>
+            </li>
+            <li class="oll fl">
+                <img height="80%" src="images/w3.png" alt="" />            
+                <span></span>
+            </li>
+            <li class="oll fl">
+               <img height="80%" src="images/w4.png" alt="" />            
+                <span></span>
+            </li>
+            <li class="oll fl">
+               <img height="80%" src="images/w5.png" alt="" />            
+                <span></span>
+            </li>
+            <li class="oll fl">
+                <img height="80%" src="images/w1.png" alt="" />           
+                <span></span>
+            </li>   
+            <li class="oll fl">
+               <img height="80%" src="images/w2.png" alt="" />            
+                <span></span>
+            </li>
+            <li class="oll fl">
+               <img height="80%" src="images/w3.png" alt="" />            
+                <span></span>
+            </li>
+            <li class="oll fl">
+                <img height="80%" src="images/w4.png" alt="" />           
+               <span></span>
+            </li>                                            
+        </ul>        
+      </div> 
   </div>
   <!---->
-  <div class="content_skill_bd">
-      <div class="content_skill wrapper clearFix">
-        <p class="left fl">勤学苦练各种神功</p>
-        <p class="right fr">十八般武艺样样精通</p>
-        <p class="top fl">技能在手 江湖可走</p>
-        <div id="content_skill_div1" class="content fl">
-            <div class="box">
-                <img width="180" height="180" src="images/hua1.jpg" />
-                <span>html/css</span>
-            </div>
-            <div class="box">
-                <img width="180" height="180" src="images/hua2.jpg" />
-                <span>JS</span>
-            </div>
-            <div class="box">
-                <img width="180" height="180" src="images/hua3.jpg" />
-                <span>jquery</span>
-            </div>
-            <div class="box">
-                <img width="180" height="180" src="images/hua4.jpg" />
-                <span>DOM</span>
-            </div>
-            <div class="box">
-                <img width="180" height="180" src="images/hua5.jpg" />
-                <span>ajax</span>
-            </div>
-            <div class="box">
-                <img width="180" height="180" src="images/hua6.jpg" />
-                <span>jsonp</span>
-            </div>
-            <div class="box">
-                <img width="180" height="180" src="images/hua7.jpg" />
-                <span>php</span>
-            </div>
-            <div class="box">
-                <img width="180" height="180" src="images/hua8.jpg" />
-                <span>node.js</span>
-            </div>
-            <div class="box">
-                <img width="180" height="180" src="images/hua9.jpg" />
-                <span>html5</span>
-            </div>
-            <div class="box">
-                <img width="180" height="180" src="images/hua10.jpg" />
-                <span>css3</span>
-            </div>
-            <div class="box">
-                <img width="180" height="180" src="images/hua11.jpg" />
-                <span> move</span>
-            </div>
-            <div class="box">
-                <img width="180" height="180" src="images/hua12.jpg" />
-                <span>database</span>
-            </div>
-        </div>
+  <div id="item3"  class="end wrapper item">
+      <div>
+        <ul id="end_ul1">
+            <li>
+               <img width="132" height="200" src="images/mn1.jpg" />
+               <span><img width="132" height="200" src="images/mn1.jpg" /></span>
+            </li>
+            <li>
+               <img width="132" height="200" src="images/mn2.jpg" />
+               <span><img width="132" height="200" src="images/mn2.jpg" /></span>
+            </li>
+            <li>
+               <img width="132" height="200" src="images/mn3.jpg" />
+               <span><img width="132" height="200" src="images/mn3.jpg" /></span>
+            </li>
+            <li>
+               <img width="132" height="200" src="images/mn4.jpg" />
+               <span><img width="132" height="200" src="images/mn4.jpg" /></span>
+            </li>
+            <li>
+               <img width="132" height="200" src="images/mn5.jpg" />
+               <span><img width="132" height="200" src="images/mn5.jpg" /></span>
+            </li>
+            <li>
+               <img width="132" height="200" src="images/mn6.jpg" />
+               <span><img width="132" height="200" src="images/mn6.jpg" /></span>
+            </li>
+            <li>
+               <img width="132" height="200" src="images/mn7.jpg" />
+               <span><img width="132" height="200" src="images/mn7.jpg" /></span>
+            </li>
+            <li>
+               <img width="132" height="200" src="images/mn8.jpg" />
+               <span><img width="132" height="200" src="images/mn8.jpg" /></span>
+            </li>
+            <li>
+               <img width="132" height="200" src="images/mn9.jpg" />
+               <span><img width="132" height="200" src="images/mn9.jpg" /></span>
+            </li>
+            <li>
+               <img width="132" height="200" src="images/mn10.jpg" />
+               <span><img width="132" height="200" src="images/mn10.jpg" /></span>
+            </li>
+            <li>
+               <img width="132" height="200" src="images/mn11.jpg" />
+               <span><img width="132" height="200" src="images/mn11.jpg" /></span>
+            </li>
+        </ul>
       </div>
   </div>
   <!---->
-  <div id="end_div" class="end wrapper">
-    <ul id="end_ul1">
-        <li>
-           <img width="132" height="200" src="images/mn1.jpg" />
-           <span><img width="132" height="200" src="images/mn1.jpg" /></span>
+  <div id="item4"  class="clock item wrapper">
+      <ul style="margin-top: 40px;padding-top: 20px;margin-left: 16%" class="clearFix">
+         <li  class="fl">
+            <div class="clock_box">
+              <div class="clock_son"></div>
+              <div class="front"></div>
+              <div class="back"></div>
+              <div class="left"></div>
+              <div class="right"></div>
+              <div class="top"></div>
+              <div class="bottom"></div>
+            </div>
         </li>
-        <li>
-           <img width="132" height="200" src="images/mn2.jpg" />
-           <span><img width="132" height="200" src="images/mn2.jpg" /></span>
+        <li  class="fl">
+            <div class="clock_box">
+              <div class="clock_son"></div>
+              <div class="front"></div>
+              <div class="back"></div>
+              <div class="left"></div>
+              <div class="right"></div>
+              <div class="top"></div>
+              <div class="bottom"></div>
+            </div>
         </li>
-        <li>
-           <img width="132" height="200" src="images/mn3.jpg" />
-           <span><img width="132" height="200" src="images/mn3.jpg" /></span>
+        <li  class="fl">
+            <div class="clock_box">
+              <div class="clock_son"></div>
+              <div class="front"></div>
+              <div class="back"></div>
+              <div class="left"></div>
+              <div class="right"></div>
+              <div class="top"></div>
+              <div class="bottom"></div>
+            </div>
+        </li>        
+        <li  class="fl">
+            <div class="clock_box">
+              <div class="clock_son"></div>
+              <div class="front"></div>
+              <div class="back"></div>
+              <div class="left"></div>
+              <div class="right"></div>
+              <div class="top"></div>
+              <div class="bottom"></div>
+            </div>
         </li>
-        <li>
-           <img width="132" height="200" src="images/mn4.jpg" />
-           <span><img width="132" height="200" src="images/mn4.jpg" /></span>
-        </li>
-        <li>
-           <img width="132" height="200" src="images/mn5.jpg" />
-           <span><img width="132" height="200" src="images/mn5.jpg" /></span>
-        </li>
-        <li>
-           <img width="132" height="200" src="images/mn6.jpg" />
-           <span><img width="132" height="200" src="images/mn6.jpg" /></span>
-        </li>
-        <li>
-           <img width="132" height="200" src="images/mn7.jpg" />
-           <span><img width="132" height="200" src="images/mn7.jpg" /></span>
-        </li>
-        <li>
-           <img width="132" height="200" src="images/mn8.jpg" />
-           <span><img width="132" height="200" src="images/mn8.jpg" /></span>
-        </li>
-        <li>
-           <img width="132" height="200" src="images/mn9.jpg" />
-           <span><img width="132" height="200" src="images/mn9.jpg" /></span>
-        </li>
-        <li>
-           <img width="132" height="200" src="images/mn10.jpg" />
-           <span><img width="132" height="200" src="images/mn10.jpg" /></span>
-        </li>
-        <li>
-           <img width="132" height="200" src="images/mn11.jpg" />
-           <span><img width="132" height="200" src="images/mn11.jpg" /></span>
-        </li>
-    </ul>
-  
+       <li  class="fl">
+            <div class="clock_box">
+              <div class="clock_son"></div>
+              <div class="front"></div>
+              <div class="back"></div>
+              <div class="left"></div>
+              <div class="right"></div>
+              <div class="top"></div>
+              <div class="bottom"></div>
+            </div>
+        </li>  
+        <li  class="fl">
+            <div class="clock_box">
+              <div class="clock_son"></div>
+              <div class="front"></div>
+              <div class="back"></div>
+              <div class="left"></div>
+              <div class="right"></div>
+              <div class="top"></div>
+              <div class="bottom"></div>
+            </div>
+        </li>                                    
+      </ul>
   </div>
   <!---->
-  <div  class="move wrapper">
-     <div id="automatic">
-        <div class="prev_div"></div>
-        <a class="prev" href="###">
-            <span class="ico1"></span>
-            <span class="ico"></span>
-            <span class="txt"></span>
-        </a>
-        
-        <div class="next_div"></div>
-        <a class="next" href="###">
-            <span class="ico1"></span>
-            <span class="ico"></span>
-            <span class="txt"></span>
-        </a>
-    
-        <ul>
-            <li class="pos_0"><a href="javascript:;"><img src="images/qc1.jpg" width="100" /></a></li>
-            <li class="pos_1"><a href="javascript:;"><img src="images/qc2.jpg" width="270"  /></a></li>
-            <li class="pos_2"><a href="javascript:;"><img src="images/qc3.jpg" width="510" /></a></li>
-            <li class="pos_3"><a href="javascript:;"><img src="images/qc4.jpg" width="680"  /></a></li>
-            <li class="pos_4"><a href="javascript:;"><img src="images/qc5.jpg" width="510" /></a></li>
-            <li class="pos_5"><a href="javascript:;"><img src="images/qc12.jpg" width="270" /></a></li>
-            <li class="pos_6"><a href="javascript:;"><img src="images/qc9.jpg" width="270"  /></a></li>
-            <li class="pos_6"><a href="javascript:;"><img src="images/qc11.jpg" width="270" /></a></li>
-        </ul>
-      </div>  
-  </div>
-  <!---->
-  <div  class="footer">
-    <div id="clock_div" class="footer1 " >
-        <img src="images/c1.png">
-        <img src="images/c2.png"> ∶
-        <img src="images/c5.png">
-        <img src="images/c7.png"> ∶
-        <img src="images/c8.png">
-        <img src="images/c9.png">
-       <div class="front"></div>
-       <div class="back"></div>
-       <div class="left"></div>
-       <div class="right"></div>
-       <div class="top"></div>
-       <div class="bottom"></div>
-    </div>
-    <span id="top"></span>
+  <div   class="footer  wrapper">
+      <p>
+        JavaScript HTML5 HTML+CSS 视频 案例 联系方式 关于me 沪ICP备12022017号-88888
+      </p>  
+      <p>
+        QijiWang.gethub.io 版权所有
+      </p>      
   </div>
 </body>
 </html>

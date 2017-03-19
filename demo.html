@@ -1,0 +1,136 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>demo</title>
+<link href="css/common.css" rel="stylesheet"  />
+<link href="css/jquery-ui.min.css" rel="stylesheet"  />
+<link href="css/demo.css" rel="stylesheet"  />
+<script src="js/jquery-1.11.2.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/move9.js"></script>
+<script src="js/demo.js"></script>
+</head>
+
+<body>
+  <div id="" class="boder clearFix">
+     <div class="wrapper">
+         <h1 class="fl">MY WEBSITE</h1>
+          <div class="fr nav_right">
+            <div class="nav_right_son1"></div>
+            <ul id="daohangul" class="boder_nav fr">
+               <li class="fl"><a href="index.html">首页</a></li>
+               <li class="fl"><a href="demo.html">demo</a></li>
+               <li class="fl"><a href="fangwangzhan.html">仿整站</a></li>
+               <li style="border:none;" class="fl"><a href="me.html">关于我</a></li>
+               <li class="box fl"><a href="#"></a></li>
+            </ul>            
+          </div>
+     </div>
+  </div>
+  <!---->
+  <div id="div1" class="one_content wrapper">
+        <div style="padding-top: 30px;text-align: center;">
+          <input id="btn_prev" type="button" value="上一张"/>
+          <input id="btn_next" type="button" value="下一张"/>          
+        </div>
+        
+        <ul id="ul1">
+            <li class="l2 l2b"><img width="360" height="200" src="images/qc3.jpg" />
+               <div id="aa" class="zp1"><a href="javascript:;">1 CSS3时钟</a></div>
+            </li>
+            <li class="l2 l2a"><img width="360" height="200" src="images/qc4.jpg" />
+                <div class="zp2"><a href="javascript:;">2 3D图片展示</a></div>
+            </li>
+            <li class="l1 l1b"><img width="360" height="200" src="images/qc5.jpg" />
+               <div class="zp3"><a  href="javascript:;">3 照片墙</a></div>
+            </li>
+            <li class="l1 l1a"><img width="360" height="200" src="images/qc12.jpg" />
+               <div class="zp4"><a  href="javascript:;">4 圆形运动</a></div>
+            </li>
+            <li class="cur curb"><img width="360" height="200" src="images/qc6.jpg" />
+               <div class="zp5"><a href="javascript:;">5 屏保 </a></div>
+            </li>
+            <li class="cur cura"><img width="360" height="200" src="images/qc7.jpg" />
+                <div class="zp6"><a href="javascript:;">6 照片墙</a></div>
+            </li>
+            <li class="r1 r1b"><img width="360" height="200" src="images/qc8.jpg" />
+                <div class="zp7"><a href="javascript:;">7 放大镜</a></div>
+            </li>
+            <li class="r1 r1a"><img width="360" height="200" src="images/qc9.jpg" />
+                <div class="zp8"><a href="javascript:;">8 跳跳球</a></div>
+            </li>
+            <li class="r2 r2b"><img width="360" height="200" src="images/qc10.jpg" />
+                <div class="zp9"><a href="javascript:;">9 弧版时钟</a></div>
+            </li>
+            <li class="r2 r2a"><img width="360" height="200" src="images/qc11.jpg" />
+                <div class="zp10"><a href="javascript:;">10 json去重排序</a></div>
+            </li>
+            <li ><img width="360" height="200"src="images/qc1.jpg" />
+                <div class="zp11"><a href="javascript:;">11 幻灯片</a></div>
+            </li>
+            <li ><img width="360" height="200" src="images/qc2.jpg" />
+                <div class="zp12"><a href="javascript:;">12 正则</a></div>
+            </li>
+        </ul>
+        <div id="fudongbd"></div>
+        <!---->     
+    </div>
+    <div id="dialog" >
+        <iframe  frameborder="0" width="100%" height="100%" id="iframeResult"></iframe>
+    </div>
+</body>
+<script >
+
+	(function (){
+		var oUl = document.getElementById("daohangul");
+		var aLi = oUl.children;
+		var oBox = aLi[aLi.length - 1];
+		
+		for(var i = 0; i < aLi.length - 1; i++){
+			aLi[i].onmouseover = function(){
+				
+				move(oBox,this.offsetLeft);
+			};
+		}
+		var speed = 0;
+		var left=0;
+		function move(obj,iTarget){
+			
+			clearInterval(obj.timer);
+			obj.timer = setInterval(function(){
+				speed += (iTarget - left)/5;//加速度
+				speed *= 0.7;  //摩擦
+				
+				left += speed;
+				obj.style.left = Math.round(left) + "px";
+				if(obj.offsetLeft == iTarget && Math.abs(speed) < 1){
+					clearInterval(obj.timer);
+				}
+				
+				
+			},30);
+		}
+		
+	})();
+
+  (function (){
+      $( "#dialog" ).dialog({
+        autoOpen: false,
+        width:1000,
+        height:640,
+        show: {
+              effect: "blind",
+              duration: 500
+          },
+          hide: {
+              effect: "explode",
+              duration: 800
+          }
+      });
+  })();
+
+</script>
+
+
+</html>

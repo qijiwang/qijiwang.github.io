@@ -1,0 +1,121 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="author" content="智能社 - zhinengshe.com" />
+<meta name="copyright" content="智能社 - zhinengshe.com" />
+<title>智能社 - www.zhinengshe.com</title>
+<style>
+
+*{margin:0;padding:0;list-style:none;}
+body{ background:pink;}
+#ul1{ position:relative;width:400px; height:400px; background:#ccc; margin:100px auto;}
+#ul1 li{ position:absolute;left:0;top:0; opacity:0;overflow:hidden;
+	transform: perspective(800px) rotateY(0deg);
+	transition:0.5s all ease;
+}
+
+#ul1 li.l2{ opacity:0; transform: perspective(800px) translateX(-300px) rotateY(45deg); z-index:1;}
+#ul1 li.l1{ opacity:1; transform: perspective(800px) translateX(-200px) rotateY(45deg); z-index:3;}
+#ul1 li.cur{ opacity:1; z-index:5;}
+
+#ul1 li.r1{ opacity:1; transform: perspective(800px) translateX(200px) rotateY(-45deg); z-index:3;}
+#ul1 li.r2{ opacity:0; transform: perspective(800px) translateX(300px) rotateY(-45deg); z-index:1;}
+#ul1 li div{width:400px;height:140px;background:rgba(0,0,255,0.5);position:absolute;left:0;bottom:-140px;
+transition:0.5s all ease;
+}
+#ul1 li.cur:hover div{bottom:0;}
+</style>
+
+</head>
+<script>
+window.onload = function(){
+	var oBtnPrev = document.getElementById("btn_prev");
+	var oBtnNext = document.getElementById("btn_next");
+	var oUl = document.getElementById("ul1");
+	var aLi = oUl.children;
+	var len = aLi.length;
+	
+	//存class
+	var aClass = [];
+	for(var i = 0; i < len; i++){
+		aClass.push(aLi[i].className);
+	}
+	
+	
+	var bReady = true;//准备好了 
+	oBtnNext.onclick = function(){
+		if(!bReady) return ;
+		bReady = false;
+		aClass.unshift(aClass.pop());
+	 	tab();
+	};
+	
+	oBtnPrev.onclick = function(){
+		if(!bReady) return ;
+		bReady = false;
+	 	aClass.push(aClass.shift());
+		tab();	
+	};
+	
+	function tab(){
+		for(var i = 0; i < len; i++){
+			aLi[i].className = aClass[i];
+		}
+		
+		var oCur = oUl.querySelector(".cur");
+		oCur.addEventListener("transitionend",function(){
+			bReady = true;
+		},false);	
+	}
+	
+ 
+};
+
+</script>
+<body>
+<input id="btn_prev" type="button" value="上一张"/>
+<input id="btn_next" type="button" value="下一张"/>
+<ul id="ul1">
+	<li class="l2"><img width="400" height="400" src="../images/mn1.jpg" />
+       <div></div>
+    </li>
+	<li class="l1"><img width="400" height="400" src="../images/mn2.jpg" />
+       <div></div>
+    </li>
+	<li class="cur"><img width="400" height="400" src="../images/mn3.jpg" />
+       <div></div>
+    </li>
+	<li class="r1"><img width="400" height="400" src="../images/mn4.jpg" />
+        <div></div>
+    </li>
+	<li class="r2"><img width="400" height="400" src="../images/mn5.jpg" />
+    
+       <div></div>
+    </li>
+	<li><img width="400" height="400" src="../images/mn6.jpg" />
+        <div></div>
+    </li>
+	<li><img width="400" height="400" src="../images/mn7.jpg" />
+        <div></div>
+    </li>
+	<li><img width="400" height="400" src="../images/mn8.jpg" />
+        <div></div>
+    </li>
+	<li><img width="400" height="400" src="../images/mn9.jpg" />
+        <div></div>
+    </li>
+	<li><img width="400" height="400" src="../images/mn10.jpg" />
+        <div></div>
+    </li>
+	<li><img width="400" height="400" src="../images/mn11.jpg" />
+        <div></div>
+    </li>
+	<li><img width="400" height="400" src="../images/mn12.jpg" />
+        <div></div>
+    </li>
+
+</ul>
+
+</body>
+</html>

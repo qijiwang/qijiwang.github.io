@@ -12,5 +12,5 @@ img,input,select,textarea{ vertical-align:top; }
 .clearFix:after{ content:''; display:block; clear:both;}
 .clearFix{ zoom:1; }
 
-.wrapper{width:1200px;margin:0 auto;}
+.wrapper{width:1000px;margin:0 auto;}
 a{display:inline-block;width:100%;height:100%;}

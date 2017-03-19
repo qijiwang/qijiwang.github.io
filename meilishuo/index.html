@@ -1,0 +1,1187 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" href="css/commit.css" />
+		<link rel="stylesheet" href="css/index.css" />
+		<script src="js/jquery-1.11.2.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/index.js"></script>
+	</head>
+	<body>
+	<!--header-->
+	<div class="head">
+		<div class="topbar">
+			<div class="wrapper">
+				<ul class="inner clearFix">
+					<li class="fl">						
+						<a class="boderNone" href="#">
+							<em class="index_page"></em>
+							返回首页
+						</a>
+					</li>
+					<li class="fr">
+						<a class="boderNone" href="#">商家中心</a>
+					</li>
+					<li class="fr drap">
+						<a href="#">
+							帮助中心
+							<em class="index_3jiao"></em>						
+						</a>
+						<ul class="down">
+							<li>
+								<a href="#">买家服务</a>
+							</li>
+							<li>
+								<a href="#">商家服务</a>
+							</li>
+							<li>
+								<a href="#">规则中心</a>
+							</li>						
+						</ul>
+					</li>
+					<li class="fr">
+						<a href="#">
+							<em class="index_page"></em>
+							我的订单
+						</a>
+					</li>
+					<li class="fr">
+						<a href="#">
+							<em class="index_gouwuche"></em>
+							我的购物车
+						</a>
+						
+					</li>
+					<li class="fr drap">
+						<a href="#">
+							<em class="index_page"></em>
+							我的收藏
+						</a>
+						<ul class="down">
+							<li>
+								<a href="#">收藏宝贝</a>
+							</li>
+							<li>
+								<a href="#">收藏店铺</a>
+							</li>
+						</ul>
+					</li>
+					<li class="fr">
+						<a href="#">注册</a>
+						
+					</li>
+					<li class="fr">
+						<a href="#">登录</a>
+						
+					</li>
+					<li class="fr">
+						<a href="#">
+							<em class="index_qq"></em>
+							qq登录
+						</a>
+						
+					</li>
+					<li class="fr">
+						<a href="#">
+							<em class="index_weixin"></em>
+							微信登录
+						</a>
+						
+					</li>
+				</ul>				
+			</div>
+		</div>
+		<script type="text/javascript">			
+				var ad1 = document.getElementsByClassName("drap");
+				var ad2 = document.getElementsByClassName("down");
+				for(var i=0;i<ad1.length;i++){
+					ad1[i].index=i;
+					ad1[i].onmouseover=function (){
+						for(var i=0;i<ad1.length;i++){
+							ad2[i].style.display="none";
+						}
+						
+						ad2[this.index].style.display="block";
+					}
+					ad1[i].onmouseout=function (){
+						for(var i=0;i<ad1.length;i++){
+							ad2[i].style.display="none";
+						}
+					}
+				}
+		</script>
+		<!---->
+		<div id="com_search">
+			<div class="inner clearFix">
+				<div class="fl logo">
+					<h3>美丽说</h3>
+				</div>
+				<div class="fl search">
+					<span class="one active">宝贝</span>
+					<span class="one two">店铺</span>
+					<div class="search_box">
+						<input type="text" name="" id="search_txt"  placeholder="请输入关键字" />
+						<span></span>
+					</div>
+					<script type="text/javascript">
+						var aOne = document.getElementsByClassName("one");
+						for(var i=0;i<aOne.length;i++){
+							aOne[i].onclick=function (){
+								for(var i=0;i<aOne.length;i++){
+									aOne[i].style.background="#ccc";
+								}
+								this.style.background="red";
+							}
+						}
+					</script>
+					<div class="change">
+						<a href="#">毛衣</a>
+						<a class="red" href="#">打底衫</a>
+						<a href="#">外套</a>
+						<a href="#">大衣</a>
+						<a class="red" href="#">羽绒服</a>
+						<a href="#">围巾</a>
+						<a href="#">雪地靴</a>
+						<a class="red" href="#">打底裤</a>
+						<a href="#">套装</a>
+						<a href="#">高领毛衣</a>
+						<a href="#">睡衣</a>
+						<a href="#">棉服</a>						
+					</div>
+				</div>
+				<div class=" erweima">
+					<img _src="images/erweima.gif"/>
+				</div>
+			</div>
+		</div>
+		<!---->
+		<div class="com_nav">
+			<div class="wrapper">
+				<ul class="clearFix">
+					<li class="fl all">
+						全部商品
+						<div id="all_box">
+							<ul>
+								<li style="border-top:1px solid red;">
+									<div class="attr_box clearFix ">
+										<h3 class="fl">上衣</h3>
+										<p class="fl">
+											<a href="#">呢大衣</a>
+											<a href="#">卫衣</a>
+											<a href="#">棉服</a>
+											<a href="#">外套</a>
+										</p>
+										<span class="fr">></span>
+										<div class="all_son">
+											<div>
+												<h4 class="h4one">新品发布</h4>
+												<p>
+													<a href="#">商品名称</a>
+													<a href="#">商品名称</a>
+													<a href="#">商品名称</a>
+													<a href="#">商品名称</a>
+													<a href="#">商品名称</a>
+													<a href="#">商品名称</a>
+													<a href="#">商品名称</a>
+													<a href="#">商品名称</a>
+												</p>
+											</div>
+											<div>
+												<h4>经典必备</h4>
+												<p>
+													<a href="#">商品名称</a>
+													<a href="#">商品名称</a>
+													<a href="#">商品名称</a>
+													<a href="#">商品名称</a>
+													<a href="#">商品名称</a>
+													<a href="#">商品名称</a>
+													<a href="#">商品名称</a>
+													<a href="#">商品名称</a>
+												</p>
+											</div>										
+									</div>
+								</li>
+								<li class="">
+									<div class="attr_box clearFix">
+										<h3 class="fl">上衣</h3>
+										<p class="fl">
+											<a href="#">呢大衣</a>
+											<a href="#">卫衣</a>
+											<a href="#">棉服</a>
+											<a href="#">外套</a>
+										</p>
+										<span class="fr">></span>
+										<div class="all_son">
+											<div>
+												<h4 class="h4one">新品发布</h4>
+												<p>
+													<a href="#">商品名称</a>
+													<a href="#">商品名称</a>
+													<a href="#">商品名称</a>
+													<a href="#">商品名称</a>
+													<a href="#">商品名称</a>
+													<a href="#">商品名称</a>
+													<a href="#">商品名称</a>
+													<a href="#">商品名称</a>
+												</p>
+											</div>
+											<div>
+												<h4>经典必备</h4>
+												<p>
+													<a href="#">商品名称</a>
+													<a href="#">商品名称</a>
+													<a href="#">商品名称</a>
+													<a href="#">商品名称</a>
+													<a href="#">商品名称</a>
+													<a href="#">商品名称</a>
+													<a href="#">商品名称</a>
+													<a href="#">商品名称</a>
+												</p>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li class="">
+									<div class="attr_box clearFix">
+										<h3 class="fl">上衣</h3>
+										<p class="fl">
+											<a href="#">呢大衣</a>
+											<a href="#">卫衣</a>
+											<a href="#">棉服</a>
+											<a href="#">外套</a>
+										</p>
+										<span class="fr">></span>
+										<div class="all_son">
+											<div>
+												<h4 class="h4one">新品发布</h4>
+												<p>
+													<a href="#">商品名称</a>
+													<a href="#">商品名称</a>
+													<a href="#">商品名称</a>
+													<a href="#">商品名称</a>
+													<a href="#">商品名称</a>
+													<a href="#">商品名称</a>
+													<a href="#">商品名称</a>
+													<a href="#">商品名称</a>
+												</p>
+											</div>
+											<div>
+												<h4>经典必备</h4>
+												<p>
+													<a href="#">商品名称</a>
+													<a href="#">商品名称</a>
+													<a href="#">商品名称</a>
+													<a href="#">商品名称</a>
+													<a href="#">商品名称</a>
+													<a href="#">商品名称</a>
+													<a href="#">商品名称</a>
+													<a href="#">商品名称</a>
+												</p>
+											</div>
+									</div>
+								</li>
+								<li class="">
+									<div class="attr_box clearFix">
+										<h3 class="fl red">上衣</h3>
+										<p class="fl">
+											<a href="#">呢大衣</a>
+											<a href="#">卫衣</a>
+											<a href="#">棉服</a>
+											<a href="#">外套</a>
+										</p>
+										<span class="fr">></span>
+										<div class="all_son">
+											<div>
+												<h4 class="h4one">新品发布</h4>
+												<p>
+													<a href="#">商品名称</a>
+													<a href="#">商品名称</a>
+													<a href="#">商品名称</a>
+													<a href="#">商品名称</a>
+													<a href="#">商品名称</a>
+													<a href="#">商品名称</a>
+													<a href="#">商品名称</a>
+													<a href="#">商品名称</a>
+												</p>
+											</div>
+											<div>
+												<h4>经典必备</h4>
+												<p>
+													<a href="#">商品名称</a>
+													<a href="#">商品名称</a>
+													<a href="#">商品名称</a>
+													<a href="#">商品名称</a>
+													<a href="#">商品名称</a>
+													<a href="#">商品名称</a>
+													<a href="#">商品名称</a>
+													<a href="#">商品名称</a>
+												</p>
+											</div>										
+									</div>
+								</li>
+								<li class="">
+									<div class="attr_box clearFix">
+										<h3 class="fl">上衣</h3>
+										<p class="fl">
+											<a href="#">呢大衣</a>
+											<a href="#">卫衣</a>
+											<a href="#">棉服</a>
+											<a href="#">外套</a>
+										</p>
+										<span class="fr">></span>										
+										<div class="all_son">
+											<div>
+												<h4 class="h4one">新品发布</h4>
+												<p>
+													<a href="#">商品名称</a>
+													<a href="#">商品名称</a>
+													<a href="#">商品名称</a>
+													<a href="#">商品名称</a>
+													<a href="#">商品名称</a>
+													<a href="#">商品名称</a>
+													<a href="#">商品名称</a>
+													<a href="#">商品名称</a>
+												</p>
+											</div>
+											<div>
+												<h4>经典必备</h4>
+												<p>
+													<a href="#">商品名称</a>
+													<a href="#">商品名称</a>
+													<a href="#">商品名称</a>
+													<a href="#">商品名称</a>
+													<a href="#">商品名称</a>
+													<a href="#">商品名称</a>
+													<a href="#">商品名称</a>
+													<a href="#">商品名称</a>
+												</p>
+											</div>
+									</div>
+								</li>
+								<li class="">
+									<div class="attr_box clearFix">
+										<h3 class="fl red">上衣</h3>
+										<p class="fl">
+											<a href="#">呢大衣</a>
+											<a href="#">卫衣</a>
+											<a class="red" href="#">棉服</a>
+											<a href="#">外套</a>
+										</p>
+										<span class="fr">></span>
+										<div class="all_son">
+											<div>
+												<h4 class="h4one">新品发布</h4>
+												<p>
+													<a href="#">商品名称</a>
+													<a href="#">商品名称</a>
+													<a href="#">商品名称</a>
+													<a href="#">商品名称</a>
+													<a href="#">商品名称</a>
+													<a href="#">商品名称</a>
+													<a href="#">商品名称</a>
+													<a href="#">商品名称</a>
+												</p>
+											</div>
+											<div>
+												<h4>经典必备</h4>
+												<p>
+													<a href="#">商品名称</a>
+													<a href="#">商品名称</a>
+													<a href="#">商品名称</a>
+													<a href="#">商品名称</a>
+													<a href="#">商品名称</a>
+													<a href="#">商品名称</a>
+													<a href="#">商品名称</a>
+													<a href="#">商品名称</a>
+												</p>
+											</div>										
+									</div>
+								</li>		
+								<li class="">
+									<div class="attr_box clearFix">
+										<h3 class="fl">上衣</h3>
+										<p class="fl">
+											<a href="#">呢大衣</a>
+											<a href="#">卫衣</a>
+											<a href="#">棉服</a>
+											<a class="red" href="#">外套</a>
+										</p>
+										<span class="fr">></span>
+										<div class="all_son">
+											<div>
+												<h4 class="h4one">新品发布</h4>
+												<p>
+													<a href="#">商品名称</a>
+													<a href="#">商品名称</a>
+													<a href="#">商品名称</a>
+													<a href="#">商品名称</a>
+													<a href="#">商品名称</a>
+													<a href="#">商品名称</a>
+													<a href="#">商品名称</a>
+													<a href="#">商品名称</a>
+												</p>
+											</div>
+											<div>
+												<h4>经典必备</h4>
+												<p>
+													<a href="#">商品名称</a>
+													<a href="#">商品名称</a>
+													<a href="#">商品名称</a>
+													<a href="#">商品名称</a>
+													<a href="#">商品名称</a>
+													<a href="#">商品名称</a>
+													<a href="#">商品名称</a>
+													<a href="#">商品名称</a>
+												</p>
+											</div>										
+									</div>
+								</li>		
+								<li class="">
+									<div class="attr_box clearFix">
+										<h3 class="fl">上衣</h3>
+										<p class="fl">
+											<a href="#">呢大衣</a>
+											<a href="#">卫衣</a>
+											<a href="#">棉服</a>
+											<a class="red" href="#">外套</a>
+										</p>
+										<span class="fr">></span>
+										<div class="all_son">
+											<div>
+												<h4 class="h4one">新品发布</h4>
+												<p>
+													<a href="#">商品名称</a>
+													<a href="#">商品名称</a>
+													<a href="#">商品名称</a>
+													<a href="#">商品名称</a>
+													<a href="#">商品名称</a>
+													<a href="#">商品名称</a>
+													<a href="#">商品名称</a>
+													<a href="#">商品名称</a>
+												</p>
+											</div>
+											<div>
+												<h4>经典必备</h4>
+												<p>
+													<a href="#">商品名称</a>
+													<a href="#">商品名称</a>
+													<a href="#">商品名称</a>
+													<a href="#">商品名称</a>
+													<a href="#">商品名称</a>
+													<a href="#">商品名称</a>
+													<a href="#">商品名称</a>
+													<a href="#">商品名称</a>
+												</p>
+											</div>										
+									</div>
+								</li>		
+								<li class="">
+									<div class="attr_box clearFix">
+										<h3 class="fl">上衣</h3>
+										<p class="fl">
+											<a class="red" href="#">呢大衣</a>
+											<a href="#">卫衣</a>
+											<a href="#">棉服</a>
+											<a href="#">外套</a>
+										</p>
+										<span class="fr">></span>
+										<div class="all_son">
+											<div>
+												<h4 class="h4one">新品发布</h4>
+												<p>
+													<a href="#">商品名称</a>
+													<a href="#">商品名称</a>
+													<a href="#">商品名称</a>
+													<a href="#">商品名称</a>
+													<a href="#">商品名称</a>
+													<a href="#">商品名称</a>
+													<a href="#">商品名称</a>
+													<a href="#">商品名称</a>
+												</p>
+											</div>
+											<div>
+												<h4>经典必备</h4>
+												<p>
+													<a href="#">商品名称</a>
+													<a href="#">商品名称</a>
+													<a href="#">商品名称</a>
+													<a href="#">商品名称</a>
+													<a href="#">商品名称</a>
+													<a href="#">商品名称</a>
+													<a href="#">商品名称</a>
+													<a href="#">商品名称</a>
+												</p>
+											</div>										
+									</div>
+								</li>		
+								<li class="">
+									<div class="attr_box clearFix">
+										<h3 class="fl">上衣</h3>
+										<p class="fl">
+											<a href="#">呢大衣</a>
+											<a href="#">卫衣</a>
+											<a class="red" href="#">棉服</a>
+											<a href="#">外套</a>
+										</p>
+										<span class="fr">></span>
+										<div class="all_son">
+											<div>
+												<h4 class="h4one">新品发布</h4>
+												<p>
+													<a href="#">商品名称</a>
+													<a href="#">商品名称</a>
+													<a href="#">商品名称</a>
+													<a href="#">商品名称</a>
+													<a href="#">商品名称</a>
+													<a href="#">商品名称</a>
+													<a href="#">商品名称</a>
+													<a href="#">商品名称</a>
+												</p>
+											</div>
+											<div>
+												<h4>经典必备</h4>
+												<p>
+													<a href="#">商品名称</a>
+													<a href="#">商品名称</a>
+													<a href="#">商品名称</a>
+													<a href="#">商品名称</a>
+													<a href="#">商品名称</a>
+													<a href="#">商品名称</a>
+													<a href="#">商品名称</a>
+													<a href="#">商品名称</a>
+												</p>
+											</div>										
+									</div>
+								</li>		
+								<li class="" style="border-bottom:none;">
+									<div class="attr_box clearFix" style="border:none;">
+										<h3 class="fl">上衣</h3>
+										<p class="fl">
+											<a href="#">呢大衣</a>
+											<a class="red" href="#">卫衣</a>
+											<a href="#">棉服</a>
+											<a href="#">外套</a>
+										</p>
+										<span class="fr">></span>
+										<div class="all_son">
+											<div>
+												<h4 class="h4one">新品发布</h4>
+												<p>
+													<a href="#">商品名称</a>
+													<a href="#">商品名称</a>
+													<a href="#">商品名称</a>
+													<a href="#">商品名称</a>
+													<a href="#">商品名称</a>
+													<a href="#">商品名称</a>
+													<a href="#">商品名称</a>
+													<a href="#">商品名称</a>
+												</p>
+											</div>
+											<div>
+												<h4>经典必备</h4>
+												<p>
+													<a href="#">商品名称</a>
+													<a href="#">商品名称</a>
+													<a href="#">商品名称</a>
+													<a href="#">商品名称</a>
+													<a href="#">商品名称</a>
+													<a href="#">商品名称</a>
+													<a href="#">商品名称</a>
+													<a href="#">商品名称</a>
+												</p>
+											</div>										
+									</div>
+								</li>		
+							</ul>
+						</div>
+					</li>
+					<li class="fl nav_tab "><a class="red" href="#">首页</a></li>
+					<li class="fl nav_tab"><a href="#">风格好店</a></li>
+					<li class="fl nav_tab"><a href="#">好物</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+ <!-- banner -->
+   <div class="wrapper banner_box clearFix" id="">
+		<div class="banner_inner fr">
+			<ul class="clearFix">
+				<li class="fl">
+					<a href="#">
+						<img width="900" height="442" _src="images/b1.jpg" alt="">
+					</a>
+				</li>
+				<li class="fl">
+					<a href="#">
+						<img width="900" height="442" _src="images/b2.jpg" alt="">
+					</a>
+				</li>
+				<li class="fl">
+					<a href="#">
+						<img width="900" height="442" _src="images/b1.jpg" alt="">
+					</a>
+				</li>
+			</ul>
+			<div class="banner_tab">
+				<b class="active"></b>
+				<b></b>
+				<b></b>
+			</div>
+			<div class="banner_lr clearFix">
+				<span class="fl" id="banner_l"></span>
+				<span class="fr" id="banner_r"></span>
+			</div>
+		</div>
+   </div>
+   <script>
+function getStyle(obj,attr){
+	return obj.currentStyle?obj.currentStyle[attr]:getComputedStyle(obj,false)[attr];
+}
+//time,fn	-->json
+function move(obj,json,opational){
+	
+	var opational = opational || {};
+	opational.time = opational.time || 300;
+	opational.fn = opational.fn || null;
+	opational.type = opational.type || 'ease-out';
+	
+	var start={};
+	var dis={};
+	for(var key in json){
+		start[key]=parseInt(getStyle(obj,key));
+		dis[key]=json[key]-start[key];
+	}
+	
+	var count=Math.round(opational.time/30);
+	var n=0;
+	
+	clearInterval(obj.timer);
+	obj.timer=setInterval(function(){
+		n++;
+		
+		for(var key in json){
+			//办事
+			switch(opational.type){
+				case 'linear':
+					var a = n/count;
+					var cur=start[key]+dis[key]*a;
+					break;
+				case 'ease-in':
+					var a=n/count;
+					var cur=start[key]+dis[key]*a*a*a
+					break;
+				case 'ease-out':
+					var a=1-n/count;
+					var cur=start[key]+dis[key]*(1-a*a*a)
+					break;	
+			}
+			
+			if(key=='opacity'){
+				obj.style.opacity=cur;
+				obj.style.filter='alpha(opacity:'+cur*100+')';
+			}else{
+				obj.style[key]=cur+'px';
+				
+			}	
+		}
+		
+		if(n==count){
+			clearInterval(obj.timer);
+			opational.fn && opational.fn();
+		
+		}
+	},30);
+}
+
+   	var aBanner=document.getElementsByClassName("banner_inner")[0];
+   	var aLi=aBanner.getElementsByTagName("li");
+   	var oUl=aBanner.getElementsByTagName("ul")[0];
+   	var aLi=aBanner.getElementsByTagName("b");
+   	var aS1=aBanner.getElementsByTagName("span")[0];
+   	var aS2=aBanner.getElementsByTagName("span")[1];
+   	var now=0;
+	var ready=true;
+	var timer=null;
+
+	oUl.innerHTML+=oUl.innerHTML;
+	oUl.style.width=oUl.children.length*oUl.children[0].offsetWidth+'px';
+
+	for(var i=0;i<aLi.length;i++){//添加点击
+		(function(index){
+			aLi[i].onclick=function(){
+				now=index
+				tab();
+			};	
+		})(i);
+	}		
+	function tab(){//切换
+		for(var i=0;i<aLi.length;i++){
+			aLi[i].className='';	  
+		}
+		
+			aLi[now%aLi.length].className='active';	
+		
+		//oUl.style.left=-index*oUl.children[0].offsetWidth+'px';
+		move(oUl,{left:-now*oUl.children[0].offsetWidth},{time:700,fn:function(){
+			ready=true;
+			if(now==aLi.length){
+				//归位
+				oUl.style.left=0;
+				now=0;	
+			}
+		}});	
+	}
+
+	aS2.onclick=function(){
+		if(!ready) return;
+		ready=false;
+		now++;
+		tab();
+	};
+	aS1.onclick=function(){
+		if(!ready) return;
+		ready=false;
+		now--;
+		if(now==-1){
+			//alert('到极限了，要归位')
+			oUl.style.left= -oUl.offsetWidth/2+'px';//先归位
+			now=aLi.length-1;	
+		}
+		tab();//再动
+	};
+	timer=setInterval(function (){
+		now++;
+		tab();
+	},2000);
+	
+	aBanner.onmouseover = function (){
+		clearInterval(timer);
+	}
+	aBanner.onmouseout = function (){
+		timer=setInterval(function (){
+			now++;
+			tab();
+		},4000);
+		
+	}	
+
+   </script>
+   
+   <!--one  -->
+   <ul class="top_ad_box wrapper">
+	   	<li  class="right20">
+	   		<a href="#">
+	   			<img _src="images/one1.jpg" alt="">
+	   		</a>
+	   	</li>
+	   	<li  class="right20">
+	   		<a href="#">
+	   			<img _src="images/one1.jpg" alt="">
+	   		</a>
+	   	</li>
+	   	<li  class="right20">
+	   		<a href="#">
+	   			<img _src="images/one1.jpg" alt="">
+	   		</a>
+	   	</li>
+	   	<li >
+	   		<a href="#">
+	   			<img _src="images/one1.jpg" alt="">
+	   		</a>
+	   	</li>
+
+	</ul>
+   <!-- 倒计时 -->
+   <div class="wrapper">
+   		<div id="iTimer" class="timer">
+   			距离结束还有
+   			<span>3</span>天
+			<span>3</span>时
+   			<span>3</span>分
+   			<span>3</span>秒
+   		</div>
+   		<!--  -->
+   		<ul class="time_list ">
+   			<li class="right20 fl">
+   				<div class="divTop">
+   					<img class="img1" width="38" height="42" _src="images/good.png" alt="">
+   					<img _src="images/list1.jpg" alt="">
+   					<p class="textP">
+   						<a href="#">【头层牛皮】复古粗跟欧美浅口单鞋女真皮圆头高跟奶奶鞋
+   						</a>
+   					</p>
+   				</div>
+   				<div>
+   					<span>￥188</span>
+   					<del>￥588</del>
+   				</div>
+   				<div class="divBottom clearFix">
+   					<div class="fl">
+   						<p>紧剩33433件</p>
+   						<div class="bar_box">
+   							<div id="bar"></div>
+   						</div>
+   					</div>
+   					<a class="fr btn_a" href="#">立即抢购</a>
+   				</div>
+   			</li>
+  			<li class="right20 fl">
+   				<div class="divTop">
+   					<img class="img1" width="38" height="42" _src="images/good.png" alt="">
+   					<img _src="images/list1.jpg" alt="">
+   					<p class="textP">
+   						<a href="#">【头层牛皮】复古粗跟欧美浅口单鞋女真皮圆头高跟奶奶鞋
+   						</a>
+   					</p>
+   				</div>
+   				<div>
+   					<span>￥188</span>
+   					<del>￥588</del>
+   				</div>
+   				<div class="divBottom clearFix">
+   					<div class="fl">
+   						<p>紧剩33433件</p>
+   						<div class="bar_box">
+   							<div id="bar"></div>
+   						</div>
+   					</div>
+   					<a class="fr btn_a" href="#">立即抢购</a>
+   				</div>
+   			</li>
+  			<li class="right20 fl">
+   				<div class="divTop">
+   					<img class="img1" width="38" height="42" _src="images/good.png" alt="">
+   					<img _src="images/list1.jpg" alt="">
+   					<p class="textP">
+   						<a href="#">【头层牛皮】复古粗跟欧美浅口单鞋女真皮圆头高跟奶奶鞋
+   						</a>
+   					</p>
+   				</div>
+   				<div>
+   					<span>￥188</span>
+   					<del>￥588</del>
+   				</div>
+   				<div class="divBottom clearFix">
+   					<div class="fl">
+   						<p>紧剩33433件</p>
+   						<div class="bar_box">
+   							<div id="bar"></div>
+   						</div>
+   					</div>
+   					<a class="fr btn_a" href="#">立即抢购</a>
+   				</div>
+   			</li>
+  			<li class="right20 fl">
+   				<div class="divTop">
+   					<img class="img1" width="38" height="42" _src="images/good.png" alt="">
+   					<img _src="images/list1.jpg" alt="">
+   					<p class="textP">
+   						<a href="#">【头层牛皮】复古粗跟欧美浅口单鞋女真皮圆头高跟奶奶鞋
+   						</a>
+   					</p>
+   				</div>
+   				<div>
+   					<span>￥188</span>
+   					<del>￥588</del>
+   				</div>
+   				<div class="divBottom clearFix">
+   					<div class="fl">
+   						<p>紧剩33433件</p>
+   						<div class="bar_box">
+   							<div id="bar"></div>
+   						</div>
+   					</div>
+   					<a class="fr btn_a" href="#">立即抢购</a>
+   				</div>
+   			</li>
+  			<li class="fl">
+   				<div class="divTop">
+   					<img class="img1" width="38" height="42" _src="images/good.png" alt="">
+   					<img _src="images/list1.jpg" alt="">
+   					<p class="textP">
+   						<a href="#">【头层牛皮】复古粗跟欧美浅口单鞋女真皮圆头高跟奶奶鞋
+   						</a>
+   					</p>
+   				</div>
+   				<div>
+   					<span>￥188</span>
+   					<del>￥588</del>
+   				</div>
+   				<div class="divBottom clearFix">
+   					<div class="fl">
+   						<p>紧剩33433件</p>
+   						<div class="bar_box">
+   							<div id="bar"></div>
+   						</div>
+   					</div>
+   					<a class="fr btn_a" href="#">立即抢购</a>
+   				</div>
+   			</li>
+   			<li class="right20 fl">
+   				<div class="divTop">
+   					<img class="img1" width="38" height="42" _src="images/good.png" alt="">
+   					<img _src="images/list1.jpg" alt="">
+   					<p class="textP">
+   						<a href="#">【头层牛皮】复古粗跟欧美浅口单鞋女真皮圆头高跟奶奶鞋
+   						</a>
+   					</p>
+   				</div>
+   				<div>
+   					<span>￥188</span>
+   					<del>￥588</del>
+   				</div>
+   				<div class="divBottom clearFix">
+   					<div class="fl">
+   						<p>紧剩33433件</p>
+   						<div class="bar_box">
+   							<div id="bar"></div>
+   						</div>
+   					</div>
+   					<a class="fr btn_a" href="#">立即抢购</a>
+   				</div>
+   			</li>
+  			<li class="right20 fl">
+   				<div class="divTop">
+   					<img class="img1" width="38" height="42" _src="images/good.png" alt="">
+   					<img _src="images/list1.jpg" alt="">
+   					<p class="textP">
+   						<a href="#">【头层牛皮】复古粗跟欧美浅口单鞋女真皮圆头高跟奶奶鞋
+   						</a>
+   					</p>
+   				</div>
+   				<div>
+   					<span>￥188</span>
+   					<del>￥588</del>
+   				</div>
+   				<div class="divBottom clearFix">
+   					<div class="fl">
+   						<p>紧剩33433件</p>
+   						<div class="bar_box">
+   							<div id="bar"></div>
+   						</div>
+   					</div>
+   					<a class="fr btn_a" href="#">立即抢购</a>
+   				</div>
+   			</li>
+  			<li class="right20 fl">
+   				<div class="divTop">
+   					<img class="img1" width="38" height="42" _src="images/good.png" alt="">
+   					<img _src="images/list1.jpg" alt="">
+   					<p class="textP">
+   						<a href="#">【头层牛皮】复古粗跟欧美浅口单鞋女真皮圆头高跟奶奶鞋
+   						</a>
+   					</p>
+   				</div>
+   				<div>
+   					<span>￥188</span>
+   					<del>￥588</del>
+   				</div>
+   				<div class="divBottom clearFix">
+   					<div class="fl">
+   						<p>紧剩33433件</p>
+   						<div class="bar_box">
+   							<div id="bar"></div>
+   						</div>
+   					</div>
+   					<a class="fr btn_a" href="#">立即抢购</a>
+   				</div>
+   			</li>
+  			<li class="right20 fl">
+   				<div class="divTop">
+   					<img class="img1" width="38" height="42" _src="images/good.png" alt="">
+   					<img _src="images/list1.jpg" alt="">
+   					<p class="textP">
+   						<a href="#">【头层牛皮】复古粗跟欧美浅口单鞋女真皮圆头高跟奶奶鞋
+   						</a>
+   					</p>
+   				</div>
+   				<div>
+   					<span>￥188</span>
+   					<del>￥588</del>
+   				</div>
+   				<div class="divBottom clearFix">
+   					<div class="fl">
+   						<p>紧剩33433件</p>
+   						<div class="bar_box">
+   							<div id="bar"></div>
+   						</div>
+   					</div>
+   					<a class="fr btn_a" href="#">立即抢购</a>
+   				</div>
+   			</li>
+  			<li class="fl">
+   				<div class="divTop">
+   					<img class="img1" width="38" height="42" _src="images/good.png" alt="">
+   					<img _src="images/list1.jpg" alt="">
+   					<p class="textP">
+   						<a href="#">【头层牛皮】复古粗跟欧美浅口单鞋女真皮圆头高跟奶奶鞋
+   						</a>
+   					</p>
+   				</div>
+   				<div>
+   					<span>￥188</span>
+   					<del>￥588</del>
+   				</div>
+   				<div class="divBottom clearFix">
+   					<div class="fl">
+   						<p>紧剩33433件</p>
+   						<div class="bar_box">
+   							<div id="bar"></div>
+   						</div>
+   					</div>
+   					<a class="fr btn_a" href="#">立即抢购</a>
+   				</div>
+   			</li>   			  	   			   			  			   			 			
+   		</ul>
+
+   </div>
+   <!-- 为你精选 -->
+   <div class="wrapper">
+   		<div class="common_box">
+   			<h2>精品家居</h2>
+   			<p>
+   				<span></span>
+   			</p>
+   			<div class="img_box clearFix">
+   				<div class="fl">
+   					<img width=" 588" height="284" _src="images/zhen.jpg" alt="">
+   				</div>
+   				<ul class="fl">
+   					<li class="fl">
+   						<img _src="images/yigui.jpg" alt="">
+   					</li>
+   					<li class="fl">
+   						<img _src="images/yigui.jpg" alt="">
+   					</li>
+   					<li class="fl">
+   						<img _src="images/yigui.jpg" alt="">
+   					</li>   					   					
+   				</ul>
+   			</div>
+   			<div class="common_bottom">
+   				<div class="left">
+   					<a href="#">地毯地垫</a>
+   					<a class="red" href="#">贴墙</a>
+   					<a href="#">玩偶公子</a>
+   					<a href="#">贴装小物</a>
+   					<a class="red" href="#">抱枕</a>
+   					<a class="red" href="#">衣柜</a>
+   					<a href="#">文具</a>
+   					<a class="red" href="#">梳妆盒</a>
+   					<a href="#">厨房用具</a>
+   					<a href="#">床上用品</a>
+   					<a class="red" href="#">空调</a>
+   					<a href="#">电视机</a>
+   					<a href="#">床上用品</a>
+   					<a class="red" href="#">空调</a>
+   					<a href="#">电视机</a>
+   				</div>
+ 				<div class="right">
+ 					<img _src="images/cup.png" alt="">
+ 					<img _src="images/cup.png" alt="">
+ 					<img _src="images/cup.png" alt="">
+ 				</div>
+   			</div>
+   		</div>
+	    <div class="wrapper">
+	   		<div class="common_box">
+	   			<h2>精品家居</h2>
+	   			<p>
+	   				<span></span>
+	   			</p>
+	   			<div class="img_box clearFix">
+	   				<div class="fl">
+	   					<img width=" 588" height="284" _src="images/zhen.jpg" alt="">
+	   				</div>
+	   				<ul class="fl">
+	   					<li class="fl">
+	   						<img _src="images/yigui.jpg" alt="">
+	   					</li>
+	   					<li class="fl">
+	   						<img _src="images/yigui.jpg" alt="">
+	   					</li>
+	   					<li class="fl">
+	   						<img _src="images/yigui.jpg" alt="">
+	   					</li>   					   					
+	   				</ul>
+	   			</div>
+	   			<div class="common_bottom">
+	   				<div class="left">
+	   					<a href="#">地毯地垫</a>
+	   					<a class="red" href="#">贴墙</a>
+	   					<a href="#">玩偶公子</a>
+	   					<a href="#">贴装小物</a>
+	   					<a class="red" href="#">抱枕</a>
+	   					<a class="red" href="#">衣柜</a>
+	   					<a href="#">文具</a>
+	   					<a class="red" href="#">梳妆盒</a>
+	   					<a href="#">厨房用具</a>
+	   					<a href="#">床上用品</a>
+	   					<a class="red" href="#">空调</a>
+	   					<a href="#">电视机</a>
+	   					<a href="#">床上用品</a>
+	   					<a class="red" href="#">空调</a>
+	   					<a href="#">电视机</a>
+	   				</div>
+	 				<div class="right">
+	 					<img _src="images/cup.png" alt="">
+	 					<img _src="images/cup.png" alt="">
+	 					<img _src="images/cup.png" alt="">
+	 				</div>
+	   			</div>
+	   		</div>
+	   </div> 
+	</div>   	
+   	<!--foolter -->
+   	<div class="footer">
+   		<ul class="footer_ul clearFix wrapper">
+   			<li class="fl left">
+   				<h3>买家帮助</h3>
+   				<p><a href="#">新手指南</a></p>
+   				<p><a href="#">用户保障</a></p>
+   				<p><a href="#">常见问题</a></p>
+   				<p><a href="#">风险监测</a></p>
+   			</li>
+   			<li class="fl left">
+   				<h3>商家帮助</h3>
+   				<p><a href="#">商家入驻</a></p>
+   				<p><a href="#">商家后台</a></p>
+   			</li>
+   			<li class="fl left">
+   				<h3>关于我们</h3>
+   				<p><a href="#">关于美丽说</a></p>
+   				<p><a href="#">联系我们</a></p>
+   			</li>  
+   			<li class="fl ">
+   				<h3>关注我们</h3>
+   				<p><a href="#">新浪微博</a></p>
+   				<p><a href="#">qq空间</a></p>
+   				<p><a href="#">腾讯微博</a></p>
+   			</li>
+   			<li class="fr right">
+   				<h3>美丽说微信服务号</h3>
+   				<img _src="images/footer1.png" alt="">
+ 			</li>
+   			<li class="fr right">
+   				<h3>美丽说客户端下载</h3>
+   				<img _src="images/footer2.png" alt="">			
+ 			</li>			
+   		</ul>
+   		<div class="footer_bottom wrapper">
+   			<p>
+   				Copyright ©2017 Meilishuo.com 
+   				<a href="#">电信与信息服务业务经营许可证100798号</a>
+   				<a href="#">经营性网站备案信息 </a>
+   			</p>
+   			<p>
+   			京ICP备11031139号  京公网安备110108006045   客服电话：4000-800-577  文明办网文明上网举报电话：010-82615762 
+   				<a href="#"> 违法不良信息举报中心</a>
+   			</p>
+   		</div>
+   	</div>
+   	<script>
+ 
+   	</script>
+</body>
+</html>

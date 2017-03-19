@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>jQuery实现表格宽度自动拖拽效果</title> 
+<style>
+/* 代码整理：懒人之家 www.lanrenzhijia.com */
+*{ margin:0; padding:0;}
+body{font-size:14px; padding:50px;}
+.lanrenzhijia{text-align:left;}
+.lanrenzhijia th{  background-image:url('images/th.png');  height:30px;  background-repeat:no-repeat;  color:white;  text-shadow: #012b4d 2px 2px 2px;  text-align: center; }
+.lanrenzhijia td{text-indent:5px; padding:5px;color:#444;border-bottom:1px dotted #bbb;border-left:1px dotted #bbb;width:500px;}
+.lanrenzhijia td.left{border-left:1px dotted #2e638e;}
+.lanrenzhijia td.right{border-right:1px dotted #2e638e;}
+.lanrenzhijia td.bottom{border-bottom:1px dotted #2e638e;}
+.grip{width:20px;height:30px;margin-top:-3px;margin-left:-5px;position:relative;z-index:88;cursor:e-resize;}
+.grip:hover{background-position-x:-20px;}
+.dragging .grip{background-position-x:-40px;}
+.sampleText{position:relative;width:100%;}
+.dotted{background-image:url('images/dotted.png');background-repeat:repeat-y;}
+input.check{}
+#sample2Txt{float:right;}
+label{color:#0361ae;}
+#sample2 th:nth-child(2){color:Red !important;display:none;}
+#sample2 td:nth-child(2){color:Red !important;display:none;}
+#sample2 th:nth-child(3){color:Red !important;display:none;}
+#sample2 td:nth-child(3){color:Red !important;display:none;}
+</style>
+</head>
+<body>
+<!-- 代码部分begin -->
+<div class="lanrenzhijia" >
+<table id="sample2" width="100%" border="0" cellpadding="0" cellspacing="0">
+	<tr>
+		<th>标题</th><th>标题</th><th>标题</th><th>标题</th><th>标题</th>
+	</tr>
+	<tr>
+		<td class="left">表格内容</td><td>表格内容</td><td>表格内容</td><td>表格内容</td><td class="right">表格内容</td>
+	</tr>
+	<tr>
+		<td class="left">表格内容</td><td>表格内容</td><td>表格内容</td><td>表格内容</td><td class="right">表格内容</td>
+	</tr>
+	<tr>
+		<td class="left bottom">表格内容</td><td class="bottom">表格内容</td><td class="bottom">表格内容</td><td class="bottom">表格内容</td><td class="bottom right">表格内容</td>
+	</tr>																	
+</table>
+
+</div>	
+<script src="js/jquery-1.11.1.min.js"></script>
+<script	src="js/colResizable-1.5.min.js"></script>
+<script>
+$(function(){	
+	var onSampleResized = function(e){
+		var columns = $(e.currentTarget).find("th");
+		var msg = "columns widths: ";
+		columns.each(function(){ msg += $(this).width() + "px; "; })
+		$("#sample2Txt").html(msg);		
+	};	
+	$("#sample2").colResizable({
+		liveDrag:true, 
+		gripInnerHtml:"<div class='grip'></div>", 
+		draggingClass:"dragging", 
+		onResize:onSampleResized
+	});
+});	
+</script>
+<!-- 代码部分end -->
+</body>
+</html>
