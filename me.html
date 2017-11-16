@@ -13,11 +13,12 @@ window.onload=function (){
 		var oUl = document.getElementById("daohangul");
 		var aLi = oUl.children;
 		var oBox = aLi[aLi.length - 1];
-		
+
+		move(oBox,453);
 		
 		for(var i = 0; i < aLi.length - 1; i++){
 			aLi[i].onmouseover = function(){
-				//oBox.style.left = this.offsetLeft +　"px";	
+				
 				move(oBox,this.offsetLeft);
 			};
 		}
@@ -55,7 +56,7 @@ window.onload=function (){
             <ul id="daohangul" class="boder_nav fr">
                <li class="fl"><a href="index.html">首页</a></li>
                <li class="fl"><a href="demo.html">demo</a></li>
-               <li class="fl"><a href="fangwangzhan.html">仿整站</a></li>
+               <li class="fl"><a href="fangpin.html">仿品</a></li>
                <li style="border:none;" class="fl"><a href="me.html">about me</a></li>
                <li class="box fl"><a href="#"></a></li>
             </ul>            
@@ -65,76 +66,36 @@ window.onload=function (){
   
  <!---->
   <div class="me_content wrapper clearFix">
-  	<h3>MY WEBSITE > about me</h3>
  	<div class="me_boder clearFix">
  		<div  class="me_boder_left fl">
- 			<ul style="" class="me_btn_target clearFix">
- 				<li class="me_content_1a fl">
- 					<div style="width: 160px;height: 230px;margin-top: 20px;margin-left: 20px; " class="fl">
- 						<img width="100%" height="100%" src="images/two2.jpg" alt="" />
- 						<p style="text-align: center;font-size: 20px;margin-top: 16px;">照片</p>
- 					</div>
- 					<div style="margin-left: 20px;width: 200px;height: 230px;" class="fl">
- 						<h3>personal profile</h3>
- 						<p style="margin-top: 30px;">
- 							My name is Zongxiu Wang,My name is Zongxiu Wang,My name is Zongxiu Wang,
- 							My name is Zongxiu Wang,My name is Zongxiu Wang,My name is Zongxiu Wang,
- 						</p>
- 						<p style="margin-top: 20px;">
- 							My name is Zongxiu Wang,
- 						</p> 						
- 					</div>
- 				</li>
-  				<li class="me_content_1b fl">
- 					<h2>qq</h2>
- 					<p>444045515</p>
- 				</li>
- 				<li class="me_content_1c fl">
-  					<h2>tel</h2>
- 					<p>15000507215</p>				
- 				</li>
- 				<li class="me_content_1d fl">
- 					<div style="margin: 20px; ">
- 						<ul>
- 							<li>
- 								<p>html/css 90%</p>
- 								<div style="width: 300px;height: 10px;background: #bbb;margin-top: 8px;">
- 									<div style="width: 270px;height: 10px;background: blue;"></div>
- 								</div>
- 							</li>
-  							<li>
- 								<p>js 85%</p>
- 								<div style="width: 300px;height: 10px;background: #bbb;margin-top: 8px;">
- 									<div style="width: 250px;height: 10px;background: blue;"></div>
- 								</div>
- 							</li>
-   							<li>
- 								<p>jquery 80%</p>
- 								<div style="width: 300px;height: 10px;background: #bbb;margin-top: 8px;">
- 									<div style="width: 240px;height: 10px;background: blue;"></div>
- 								</div>
- 							</li>
-  							<li>
- 								<p>nodeJs 70%</p>
- 								<div style="width: 300px;height: 10px;background: #bbb;margin-top: 8px;">
- 									<div style="width: 220px;height: 10px;background: blue;"></div>
- 								</div>
- 							</li>
+ 			<ul style="position: relative;" class="me_btn_target  me_resume clearFix">
+				<li>
+					<h3>个人简介</h3>
+				</li>
+				<li>姓名： 王宗秀</li>
+				<li>性别： 男</li>
+				<li>年龄： 30</li>
+				<li>学历： 本科</li>
+				<li>qq: 5465456</li>
+				<li>电话: 13251656556</li>
+				<li>邮箱： 5465456@qq.com</li>
+				<li>爱好： sports learn</li>
+				<li style="position: absolute;right: 50px;top: 50px; height: 350px;overflow: hidden;">
+					<img width="150" height="210" src="images/two2.jpg" alt="" />
+					<span>
+						<img width="150" height="210" src="images/two2.jpg" alt="" />
+					</span>
+				</li>
 
- 						</ul>
- 					</div>
- 				</li> 				 								
  			</ul>
  			<div class="me_photo me_btn_target">
  				<h3>照片墙</h3>
- 				<iframe style="" width="100%" height="90%" src="demo/分步运动3.html" frameborder="0">
- 					
- 				</iframe>
+ 
  			</div>
 			<div class="me_weibo me_btn_target">
 				<h3>个人微博</h3>
- 				<iframe width="100%" height="90%" src="http://weibo.com/u/5802591319/home?topnav=1&wvr=6" frameborder="0"></iframe>
- 			</div> 			
+<!--  				<iframe width="100%" height="90%" src="http://weibo.com/u/5802591319/home?topnav=1&wvr=6" frameborder="0"></iframe>
+ --> 		</div> 			
  		</div>
  		<div class="me_boder_right fr">
  			<div class="me_btn">

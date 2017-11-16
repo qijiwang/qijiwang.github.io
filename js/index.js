@@ -18,14 +18,14 @@ function setStyle(obj, json)
 	}
 }
 
-window.onload=function (){
-	
+$(function (){
+
 	//导航
 	(function (){
 		var oUl = document.getElementById("daohangul");
 		var aLi = oUl.children;
 		var oBox = aLi[aLi.length - 1];
-		
+
 		
 		for(var i = 0; i < aLi.length - 1; i++){
 			aLi[i].onmouseover = function(){
@@ -52,7 +52,7 @@ window.onload=function (){
 			},30);
 		}
 		
-	})();
+	 })();
 		
 		
 	//banner选项卡	
@@ -230,7 +230,7 @@ window.onload=function (){
 				}
 				
 				var n = getDir(this,ev);
-				console.log(n)
+				
 				var oSpan = this.children[1];
 				switch(n){
 					case 0:
@@ -395,7 +395,7 @@ window.onload=function (){
 	})();
 	
 	
-	/////////////////////时钟
+	///////////////////时钟
 	
 	(function (){
 
@@ -471,5 +471,11 @@ window.onload=function (){
 	    });	
 
 	})();
-}
+
+
+
+
+})	
+
+
 
